@@ -17,7 +17,7 @@
 <body>
 
     <h1 class="text_header">
-        Список литературы для <span class="header_num">11</span> класса от Светланы Федоровны
+        Список литературы для <span class="header_num" id="check_id">11</span> класса от Светланы Федоровны
     </h1>
 
 
@@ -39,29 +39,29 @@
                         <rect x="757" y="185" width="26" height="26" fill="#4b5484" rx="10"></rect>
                         <text class="text_num" x="763" y="206">1</text>
                         <!-- станции -->
-                        <g class="greentent">
+                        <!-- <g class="greentent  heroic">
                             <circle cx="770" cy="225" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
                             <text class="text_book" x="785" y="230">Зеленый</text>
                             <text class="text_book" x="785" y="245">шатер</text>
                             <text class="text_author" x="785" y="258">Л.Е.Улицкая</text>
-                        </g>
-                        <g class="solzhenitsyn">
+                        </g> -->
+                        <g class="solzhenitsyn  heroic">
                             <circle cx="683" cy="303" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
                             <text class="text_book" x="698" y="308">Один день</text>
                             <text class="text_book" x="698" y="323">Ивана Денисовича</text>
                             <text class="text_author" x="698" y="336">А.И.Солженицын</text>
                         </g>
-                        <g class="nekrasov">
+                        <g class="nekrasov  heroic">
                             <circle cx="599" cy="378" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
                             <text class="text_book" x="614" y="383">В окопах</text>
                             <text class="text_book" x="614" y="398">Сталинграда</text>
                             <text class="text_author" x="614" y="411">В.П.Некрасов</text>
                         </g>
-                        <g class="fadeev">
+                        <!-- <g class="fadeev">
                             <circle cx="514" cy="453" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
                             <text class="text_book" x="529" y="458">Молодая гвардия</text>
                             <text class="text_author" x="529" y="471">А.А.Фадеев</text>
-                        </g>
+                        </g> -->
                         <g class="ostrovsky">
                             <circle cx="431" cy="527" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
                             <text class="text_book" x="446" y="532">Как закалялась</text>
@@ -148,7 +148,7 @@
                         <g class="pasternak">
                             <circle cx="810" cy="360" r="9" stroke="#fff" stroke-width="2" fill="#aed088"></circle>
                             <text class="text_book" x="757" y="381">Доктор Живаго</text>
-                            <text class="text_author" x="772" y="394">Б.П.Пастернак</text>
+                            <text class="text_author" x="772" y="394">Б.Л.Пастернак</text>
                         </g>
                         <g class="yalom">
                             <circle cx="900" cy="303" r="9" stroke="#fff" stroke-width="2" fill="#aed088"></circle>
@@ -436,6 +436,19 @@
                     <!-- ///8 линия - фантастическая -->
 
                 </g>
+                <g class="text">
+                    <g class="greentent  line__heroic" id='h6'>
+                        <circle cx="770" cy="225" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
+                        <text class="text_book" x="785" y="230">Зеленый</text>
+                        <text class="text_book" x="785" y="245">шатер</text>
+                        <text class="text_author" x="785" y="258">Л.Е.Улицкая</text>
+                    </g>
+                    <g class="fadeev line__heroic" id='h3'>
+                        <circle cx="514" cy="453" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
+                        <text class="text_book" x="529" y="458">Молодая гвардия</text>
+                        <text class="text_author" x="529" y="471">А.А.Фадеев</text>
+                    </g>
+                </g>
             </svg>
         </div>
 
@@ -498,295 +511,44 @@
         </div>
     </div>
 
-    <!-- <div class="b-popup" id="popup1">
-        <div class="b-popup-content">
-            Text in Popup
-            <a href="javascript:PopUpHide()">Hide popup</a>
-        </div>
-    </div> -->
 
-
-
-
-
-    <div class="mini-scheme">
-        <svg class="undeground-scheme" width=220 height=160>
-            <!-- 1 линия - героическая -->
-            <g class="all" transform="scale(0.23)">
-
-
-                <g class="line heroic">
-                    <path d="M260,680 L770 225" stroke="#4b5484" stroke-width="20" fill="transparent" />
-                    <!-- <rect x="757" y="185" width="26" height="26" fill="#4b5484" rx="10"></rect>
-                <text class="text_num" x="763" y="206">1</text> -->
-                </g>
-                <!-- ///1 линия - героическая -->
-
-
-                <!-- 2 линия - психологическая -->
-                <g class="line psychological">
-                    <path d="M44 575 Q500,530 530 105" stroke-width="20" stroke="#46cca6" fill="transparent" />
-                    <!-- <rect x="757" y="185" width="26" height="26" fill="#4b5484" rx="10"></rect>
-            <text class="text_num" x="763" y="206">1</text> -->
-                </g>
-                <!-- ///2 линия - психологическая -->
-
-
-                <!-- 3 линия - естественно-научная -->
-                <g class="line naturalscience">
-                    <path d="M735 500 V 400 Q735 360 775 360 H 860 Q900 360 900 320 V 145 Q900 105 860 105 H 519"
-                        stroke="#aed088" stroke-width="20" fill="transparent" />
-                </g>
-                <!-- ///3 линия - естественно-научная -->
-
-
-                <!-- 4 линия - детективная -->
-                <g class="line detective">
-                    <!-- <rect x="967" y="460" width="26" height="26" fill="#f9bd53" rx="10"></rect>
-                <text class="text_num" x="974" y="481">4</text> -->
-
-                    <path d="M415 680 L 565 545 Q615 500 665 500 H 980" stroke-width="20" stroke="#f9bd53"
-                        fill="transparent" />
-                </g>
-                <!-- ///4 линия - детективная -->
-
-
-                <!-- 5 линия - историческая -->
-                <g class="line historical">
-                    <!-- <rect x="589" y="667" width="26" height="26" fill="#9e4153" rx="10"></rect>
-                <text class="text_num" x="596" y="688">5</text> -->
-
-                    <path d="M310 295 H 260 Q44,295 44 485 V 580 Q44,680 200 680 H 570" stroke="#9e4153"
-                        stroke-width="20" fill="transparent" />
-                </g>
-                <!-- ///5 линия - историческая -->
-
-
-                <!-- 6 линия - сентиментальная -->
-                <g class="line sentimental">
-                    <path d="M44 48 H 235 C 270 48, 310 78, 310 120 V 280 C 310 340,  275 370, 240 370 H 220"
-                        stroke="#ff9d8d" stroke-width="20" fill="transparent" />
-                </g>
-                <!-- ///6 линия - сентиментальная -->
-
-
-                <!-- 7 линия - социально-философская -->
-                <g class="line social">
-                    <path d="M44 140 H 455" stroke="#2b6e70" stroke-width="20" fill="transparent" />
-                </g>
-                <!-- ///7 линия - социально-философская -->
-
-
-                <!-- 8 линия - фантастическая -->
-                <g class="line fantastic">
-                    <path
-                        d="M400,230 H 80 Q44,230 44 285 V 310 Q44,355 80,355 H 117 Q153,355 153 390 V 405 Q153,440 188 440 H 295"
-                        stroke-width="20" stroke="#d25488" fill="transparent" />
-                </g>
-                <!-- ///8 линия - фантастическая -->
-            </g>
-        </svg>
-    </div>
-
-    <div class="modal" id="line1">
+    <div class="modal l1" id="line1">
         <div class="modal__dialog">
 
-
-            <!-- <button class="modal__close" type="button" data-close>
-                <img src="./assets/img/cards/close.svg" alt="">
-            </button> -->
-
-            <button class="modal__btn modal__btn--prev slickPrev" type="button">
-                <img src="./assets/img/cards/left-arrow.svg" alt="">
-            </button>
-            <button class="modal__btn modal__btn--next slickNext" type="button">
-                <img src="./assets/img/cards/right-arrow.svg" alt="">
-            </button>
-
-
-
             <div id="sliderLine1">
-                <!-- <div class="modal__card">
-                    <div>
-                        <div class="modal__title">
-                            <div class="modal__text">
-                                <span class="modal__book">"Как закалялась сталь"</span>
-                                <span class="modal__author">Николай Алексеевич Островский</span>
-                            </div>
-                        </div>
 
-                        <div class="modal__content">
-                            <div class="modal__left">
-                                <div class="modal__par">
-                                    <div class="modal__h2">О книге:</div>
-                                    Роман повествует о судьбе молодого революционера Павла Корчагина, отстаивающего
-                                    завоевания Советской власти в Гражданской войне.
-                                </div>
-
-                                <div class="modal__par">
-                                    <div class="modal__h2">Факты:</div>
-                                    <p>Книга обрела большую популярность в Китае, а также в Японии.</p>
-
-                                    <p>Второстепенный персонаж по имени Павел Корчагин присутствует в повести «Школа»
-                                        Аркадия Гайдара, написанной несколькими годами ранее.</p>
-
-                                </div>
-
-                                <div class="modal__par">
-                                    <div class="modal__h2">Экранизации:</div>
-                                    <div class="modal__films">
-                                        <span class="modal__icon"><img src="./assets/img/cards/clapperboard.png"
-                                                alt=""></span>
-                                        <a class="modal__film" href="https://www.kinopoisk.ru/film/44686/"
-                                            target="blank">Как
-                                            закалялась сталь (фильм, 1942)</a>
-                                    </div>
-                                    <div class="modal__films">
-                                        <span class="modal__icon"><img src="./assets/img/cards/clapperboard.png"
-                                                alt=""></span>
-                                        <a class="modal__film" href="https://www.kinopoisk.ru/film/42907/"
-                                            target="blank">
-                                            Павел Корчагин (фильм, 1956)</a>
-                                    </div>
-                                    <div class="modal__films">
-                                        <span class="modal__icon"><img src="./assets/img/cards/clapperboard.png"
-                                                alt=""></span>
-                                        <a class="modal__film" href="https://www.kinopoisk.ru/series/369682/"
-                                            target="blank">Как
-                                            закалялась сталь (мини–сериал, 1973)</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="modal__right">
-                                <div class="modal_par">
-                                    <div class="modal__h2">Цитаты из книги:</div>
-                                    "Катись колбаской по Малой Спасской! Скажи деду – в Москву
-                                    еду!"
-                                </div>
-
-                                <div class="modal__par">"Вот как иногда поворачивается жизнь: то темь беспросветная, то
-                                    снова
-                                    улыбается солнце"</div>
-                                <div class="modal__par">"Умей жить и тогда, когда жизнь становится невыносимой. Сделай
-                                    ее
-                                    полезной"
-                                </div>
-                                <div class="modal__par">"Самое дорогое у человека – это жизнь. Она дается ему один раз,
-                                    и
-                                    прожить ее надо так, чтобы не было мучительно больно за бесцельно прожитые годы"
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="modal__footer">
-                            <div class="modal__line">
-                                <svg class="modal__line-num-left" width=20 height=20>
-                                    <rect x="0" y="0" width="20" height="20" fill="#6F75AE" rx="4"></rect>
-                                    <text class="text_num text_num--modal" x="6" y="14">1</text>
-                                </svg>
-                                <svg class="modal__line-num-right" width=20 height=20>
-                                    <rect x="0" y="0" width="20" height="20" fill="#6F75AE" rx="4"></rect>
-                                    <text class="text_num text_num--modal" x="6" y="14">1</text>
-                                </svg>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-
-
-
-                <div class="modal__card">
-                    <div>
-                        <div class="modal__title">
-                            <div class="modal__text">
-                                <span class="modal__book">"Молодая гвардия"</span>
-                                <span class="modal__author">Александр Александрович Фадеев</span>
-                            </div>
-                        </div>
-
-                        <div class="modal__content">
-                            <div class="modal__left">
-                                <div class="modal__par">
-                                    <div class="modal__h2">О книге:</div>
-
-                                    Роман посвящён действовавшей в Краснодоне во время Великой Отечественной войны
-                                    молодёжной подпольной организации под названием «Молодая гвардия» (1942—1943).
-                                </div>
-
-                                <div class="modal__par">
-                                    <div class="modal__h2">Факты:</div>
-                                    Роман «Молодая гвардия» был вторым по издаваемости произведением детской
-                                    литературы в
-                                    СССР за 1918—1986 годы: общий тираж 276 изданий составил 26,143 млн экземпляров.
-
-                                    Идею своей книги Фадеев взял из книги В. Г. Лясковского и М. Котова «Сердца
-                                    смелых»,
-                                    изданной в 1944 году.
-                                </div>
-
-                                <div class="modal__par">
-                                    <div class="modal__h2">Экранизации:</div>
-                                    <div class="modal__films">
-                                        <span class="modal__icon"><img src="./assets/img/cards/clapperboard.png"
-                                                alt=""></span>
-                                        <a class="modal__film" href="https://www.kinopoisk.ru/film/46682/"
-                                            target="blank">Молодая гвардия (фильм, 1948)</a>
-                                    </div>
-                                    <div class="modal__films">
-                                        <span class="modal__icon"><img src="./assets/img/cards/clapperboard.png"
-                                                alt=""></span>
-                                        <a class="modal__film" href="https://www.kinopoisk.ru/series/436295/"
-                                            target="blank">Последняя исповедь (мини–сериал, 1973)</a>
-                                    </div>
-                                    <div class="modal__films">
-                                        <span class="modal__icon"><img src="./assets/img/cards/clapperboard.png"
-                                                alt=""></span>
-                                        <a class="modal__film" href="https://www.kinopoisk.ru/series/880743/"
-                                            target="blank">
-                                            Молодая гвардия (сериал, 2015)</a>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="modal__right">
-                                <div class="modal__par">
-                                    <div class="modal__h2">Цитаты из книги:</div>
-                                    "А что! Нашего народа не сломит никто! ...Да разве есть другой
-                                    такой народ на свете? У кого душа такая хорошая?"
-                                </div>
-                                <div class="modal__par">
-                                    "Дай же Бог счастья нашим людям, шо останутся после нас на земли! –
-                                    тихо, торжественно сказал Валько"</div>
-                                <div class="modal__par">
-                                    "Дружба! Сколько людей на свете произносят это слово, подразумевая под ним
-                                    приятную
-                                    беседу за бутылкой вина и снисхождение к слабостям друг друга!"
-                                </div>
-                                <div class="modal__par">
-                                    "Всегда… везде… Не бойся… будь сильный… орлик мой… до последнего дыхания…"
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="modal__footer">
-                            <div class="modal__line">
-                                <svg class="modal__line-num-left" width=20 height=20>
-                                    <rect x="0" y="0" width="20" height="20" fill="#6F75AE" rx="4"></rect>
-                                    <text class="text_num text_num--modal" x="6" y="14">1</text>
-                                </svg>
-                                <svg class="modal__line-num-right" width=20 height=20>
-                                    <rect x="0" y="0" width="20" height="20" fill="#6F75AE" rx="4"></rect>
-                                    <text class="text_num text_num--modal" x="6" y="14">1</text>
-                                </svg>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
             </div>
+
+        </div>
+    </div>
+
+    <div class="modal l2" id="line2">
+        <div class="modal__dialog">
+
+            <div id="sliderLine2">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal l3" id="line3">
+        <div class="modal__dialog">
+
+            <div id="sliderLine3">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal l4" id="line4">
+        <div class="modal__dialog">
+
+            <div id="sliderLine4">
+
+            </div>
+
         </div>
     </div>
 
@@ -795,9 +557,91 @@
 
 
 
-        <script src="./js/jquery-3.6.0.min.js"></script>
-        <script src="./js/slick.min.js"></script>
-        <script src="./js/index.js"></script>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
+
+
+
+
+<!-- <div class="mini-scheme">
+    <svg class="undeground-scheme" width=220 height=160>
+        <!-- 1 линия - героическая -->
+        <g class="all" transform="scale(0.23)">
+
+
+            <g class="line heroic">
+                <path d="M260,680 L770 225" stroke="#4b5484" stroke-width="20" fill="transparent" />
+                <!-- <rect x="757" y="185" width="26" height="26" fill="#4b5484" rx="10"></rect>
+            <text class="text_num" x="763" y="206">1</text> -->
+            </g>
+            <!-- ///1 линия - героическая -->
+
+
+            <!-- 2 линия - психологическая -->
+            <g class="line psychological">
+                <path d="M44 575 Q500,530 530 105" stroke-width="20" stroke="#46cca6" fill="transparent" />
+                <!-- <rect x="757" y="185" width="26" height="26" fill="#4b5484" rx="10"></rect>
+        <text class="text_num" x="763" y="206">1</text> -->
+            </g>
+            <!-- ///2 линия - психологическая -->
+
+
+            <!-- 3 линия - естественно-научная -->
+            <g class="line naturalscience">
+                <path d="M735 500 V 400 Q735 360 775 360 H 860 Q900 360 900 320 V 145 Q900 105 860 105 H 519"
+                    stroke="#aed088" stroke-width="20" fill="transparent" />
+            </g>
+            <!-- ///3 линия - естественно-научная -->
+
+
+            <!-- 4 линия - детективная -->
+            <g class="line detective">
+                <!-- <rect x="967" y="460" width="26" height="26" fill="#f9bd53" rx="10"></rect>
+            <text class="text_num" x="974" y="481">4</text> -->
+
+                <path d="M415 680 L 565 545 Q615 500 665 500 H 980" stroke-width="20" stroke="#f9bd53"
+                    fill="transparent" />
+            </g>
+            <!-- ///4 линия - детективная -->
+
+
+            <!-- 5 линия - историческая -->
+            <g class="line historical">
+                <!-- <rect x="589" y="667" width="26" height="26" fill="#9e4153" rx="10"></rect>
+            <text class="text_num" x="596" y="688">5</text> -->
+
+                <path d="M310 295 H 260 Q44,295 44 485 V 580 Q44,680 200 680 H 570" stroke="#9e4153"
+                    stroke-width="20" fill="transparent" />
+            </g>
+            <!-- ///5 линия - историческая -->
+
+
+            <!-- 6 линия - сентиментальная -->
+            <g class="line sentimental">
+                <path d="M44 48 H 235 C 270 48, 310 78, 310 120 V 280 C 310 340,  275 370, 240 370 H 220"
+                    stroke="#ff9d8d" stroke-width="20" fill="transparent" />
+            </g>
+            <!-- ///6 линия - сентиментальная -->
+
+
+            <!-- 7 линия - социально-философская -->
+            <g class="line social">
+                <path d="M44 140 H 455" stroke="#2b6e70" stroke-width="20" fill="transparent" />
+            </g>
+            <!-- ///7 линия - социально-философская -->
+
+
+            <!-- 8 линия - фантастическая -->
+            <g class="line fantastic">
+                <path
+                    d="M400,230 H 80 Q44,230 44 285 V 310 Q44,355 80,355 H 117 Q153,355 153 390 V 405 Q153,440 188 440 H 295"
+                    stroke-width="20" stroke="#d25488" fill="transparent" />
+            </g>
+            <!-- ///8 линия - фантастическая -->
+        </g>
+    </svg>
+</div> -->

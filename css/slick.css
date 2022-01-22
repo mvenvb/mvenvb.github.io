@@ -167,7 +167,7 @@
     border-radius: 50%;
 
     background: #6F75AE;
-    border: 1px solid #768EA4;
+    /* border: 1px solid transparent; */
     color: transparent;
     font-size: 0;
     cursor: pointer;
@@ -179,9 +179,23 @@
 
 .slick-active button {
     background: #fff;
-    border: solid 5px #6F75AE;
+    /* border: solid 3px #fff; */
     width: 20px;
     height: 20px;
+
+    position: relative;
+}
+
+.slick-active button::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
 }
 
 
@@ -209,4 +223,22 @@
     top: 2px;
     left: 2px;
     z-index: 11;
+} */
+
+/* .slick-next, .slick-prev {
+    position: absolute;
+    top: 50%;
+
+
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.slick-prev {
+    left: -50px;
+}
+
+.slick-next {
+    right: -50px;
 } */
