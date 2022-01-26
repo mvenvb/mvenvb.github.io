@@ -1,3 +1,14 @@
+/* :root {
+    --color-line1: rgb(111, 117, 174);
+    --color-line2: rgb(70, 204, 166);
+    --color-line3: rgb(174, 208, 136);
+    --color-line4: rgb(249, 189, 83);
+    --color-line5: rgb(158, 65, 83);
+    --color-line6: rgb(255, 157, 141);
+    --color-line7: rgb(43, 110, 112);
+    --color-line8: rgb(210, 84, 136);
+} */
+
 *,
 *:before,
 *:after {
@@ -342,7 +353,7 @@ body {
     transition: transform .2s linear; */
 }
 
-.modal__card {
+/* .modal__card {
     /* width: 100%;
     max-width: 1000px;
     height: 550px;
@@ -353,7 +364,7 @@ body {
 
     border-radius: 20px; */
 
-}
+/* } */
 
 button {
     padding: 0;
@@ -410,10 +421,6 @@ button {
     border-radius: 5px 5px 0 0;
     padding: 5px 10px;
 
-    /* background-color: #6F75AE; */
-    background-color: rgba(111, 117, 174, 1);
-
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -451,27 +458,42 @@ button {
     font-style: italic;
 }
 
-/* .modal__a:hover {
-    font-weight: 700;
-} */
-
 .modal__par p {
-    margin: 5px 0;
+    margin: 5px 0 7px;
+    /* margin-bottom: 7px; */
 }
 
-/* .modal__img {
-    margin-bottom: 5px;
+.modal__dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    /* border-radius: 50%; */
+
+    transform: rotateZ(45deg);
+
+    border: 3px solid #D25488;
+    background-color: transparent;
+
+    margin-right: 5px;
+
+    vertical-align: middle;
+    line-height: 19px;
 }
 
-.modal__img:last-child {
-    margin-bottom: 0;
+.modal__transfer-book {
+
 }
 
-.modal__img img {
-    max-width: 180px;
-    width: 100%;
-    height: auto;
-    display: block;
+/* .modal__ddot {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+
 } */
 
 .modal__left,
@@ -479,9 +501,11 @@ button {
     padding: 30px 10px;
 }
 
+
 .modal__left {
     /* background-color: #EFF0F1; */
-    background-color: rgba(111, 117, 174, .01);
+    /* background-color: rgba(111, 117, 174, .01) */
+    /* opacity: .01; */
 
     width: 55%;
     display: flex;
@@ -585,13 +609,13 @@ button {
 
 }
 
-.modal__line-num-left {
+.modal__line-left {
     position: absolute;
     top: -5px;
     left: 0;
 }
 
-.modal__line-num-right {
+.modal__line-right {
     position: absolute;
     top: -5px;
     right: 0;

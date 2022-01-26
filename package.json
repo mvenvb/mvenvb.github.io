@@ -1,0 +1,20 @@
+{
+  "name": "undeground-literature-list",
+  "version": "1.0.0",
+  "description": "Literature list for teenagers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mvenvb/undeground-literature-list-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mvenvb/undeground-literature-list-project/issues"
+  },
+  "homepage": "https://github.com/mvenvb/undeground-literature-list-project#readme"
+}
