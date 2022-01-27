@@ -16,20 +16,21 @@
 
 <body>
 
-    <h1 class="text_header">
+    <!-- <h1 class="text_header">
         Список литературы для <span class="header_num" id="check_id">11</span> класса от Светланы Федоровны
-    </h1>
+    </h1> -->
 
 
-    <div class="cont">
+    <div class="container" id="container">
         <div class="quote">«Путешествовать между мирами, открывать неизведанное
             и проживать новые жизни... Для этого не нужна машина
             времени или звездолёт - достаточно просто открыть книгу.
             Выбирайте, куда хотите отправиться прямо сейчас»</div>
-        <div class="container">
-            <svg class="undeground-scheme" width=1050 height=750>
+        <div class="container1" id="scheme_container">
+            <!-- <svg class="undeground-scheme" width="1050" height="750" viewBox="0 0 257.67 773" id="scheme" transform="scale(1)"> -->
+            <svg class="undeground-scheme" viewBox="0 0 1050 750" id="scheme" transform="scale(1)">
                 <!-- 1 линия - героическая -->
-                <g class="all" transform="scale(1)">
+                <g class="all">
 
 
                     <g class="line heroic">
@@ -173,7 +174,7 @@
                         </g>
                         <g class="kronin">
                             <circle cx="700" cy="105" r="9" stroke="#fff" stroke-width="2" fill="#aed088"></circle>
-                            <text class="text_book" x="667" y="125">Цитадель</text>
+                            <text class="text_book" x="671" y="125">Цитадель</text>
                             <text class="text_author" x="674" y="138">А.Кронин</text>
                         </g>
                     </g>
@@ -435,18 +436,19 @@
                     </g>
                     <!-- ///8 линия - фантастическая -->
 
-                </g>
-                <g class="text">
-                    <g class="greentent  line__heroic" id='h6'>
-                        <circle cx="770" cy="225" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
-                        <text class="text_book" x="785" y="230">Зеленый</text>
-                        <text class="text_book" x="785" y="245">шатер</text>
-                        <text class="text_author" x="785" y="258">Л.Е.Улицкая</text>
-                    </g>
-                    <g class="fadeev line__heroic" id='h3'>
-                        <circle cx="514" cy="453" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
-                        <text class="text_book" x="529" y="458">Молодая гвардия</text>
-                        <text class="text_author" x="529" y="471">А.А.Фадеев</text>
+                    <!-- станции -->
+                    <g class="text">
+                        <g class="greentent  line__heroic" id='h6'>
+                            <circle cx="770" cy="225" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
+                            <text class="text_book" x="785" y="230">Зеленый</text>
+                            <text class="text_book" x="785" y="245">шатер</text>
+                            <text class="text_author" x="785" y="258">Л.Е.Улицкая</text>
+                        </g>
+                        <g class="fadeev line__heroic" id='h3'>
+                            <circle cx="514" cy="453" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
+                            <text class="text_book" x="529" y="458">Молодая гвардия</text>
+                            <text class="text_author" x="529" y="471">А.А.Фадеев</text>
+                        </g>
                     </g>
                 </g>
             </svg>
@@ -599,6 +601,7 @@
     <script src="./js/jquery-3.6.0.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/index.js"></script>
+    <script src="./js/media.js"></script>
 </body>
 
 </html>
@@ -609,4 +612,4 @@
 <!-- <div class="mini-scheme">
     <svg class="undeground-scheme" width=220 height=160>
         <!-- 1 линия - героическая -->
-        <!-- <g class="all" transform="scale(0.23)"> -->
+<!-- <g class="all" transform="scale(0.23)"> -->

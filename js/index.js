@@ -788,7 +788,7 @@ function bookCards(line, lineNumber) {
             cites +
             '</div>' +
             '</div>' +
-            '<div class="modal__footer">' +
+            '<div class="modal__footer" style="background: ' + colorL + '">' +
             '<div class="modal__line" style="' + gradBgc + '">' +
             '<svg class="modal__line-left" width=20 height=20>' +
             '<rect x="0" y="0" width="20" height="20" fill="' + colorsFooterIcons[0] + '" rx="4"></rect>' + textNum +
@@ -812,8 +812,11 @@ function bookCards(line, lineNumber) {
     modalLine.insertAdjacentHTML('afterbegin', str);
 }
 
-let s = 'background: rgba(43,110,112,1); background: linear-gradient(90deg, rgba(255,157,141,1) 25%, rgba(43,110,112,1) 79%);'
-console.log(s.match(/rgba\(\d+,\d+,\d+,\d+\)/g).slice(1, 3));
+// let s = 'background: rgba(43,110,112,1); background: linear-gradient(90deg, rgba(255,157,141,1) 25%, rgba(43,110,112,1) 79%);'
+// console.log(s.match(/rgba\(\d+,\d+,\d+,\d+\)/g).slice(1, 3));
+
+
+
 // console.log(s.split(/rgba\(\d+,\d+,\d+,\d+\)/));
 
 // $.getJSON( "./js/line1.json", function( data ) {
