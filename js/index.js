@@ -677,18 +677,16 @@ $('.stations__item').on("click", function (event) {
 
     $('#sliderLine' + line).slick("refresh");
     document.getElementById('line' + line).classList.add('show');
-    $('#sliderLine' + line).slick('slickGoTo', bookNum - 1);
+    $('#sliderLine' + line).slick('slickGoTo', bookNum);
     
     changeDots('rgb(' + colors[line-1] + ')');
     
-
-    
 });
+
 //------------------------------------------------------------
 
 
-// let dots = document.querySelectorAll('.slick-dots button');
-// let dotsActive = document.querySelectorAll('.slick-active button');
+
 
 function changeDots(color) {
     let dots = document.querySelectorAll('.slick-dots button');
@@ -710,8 +708,12 @@ function bookCards(line, lineNumber) {
     let str = '';
 
     let color = 'rgb(' + colors[lineNumber - 1] + ')';
-    let colorL = 'rgba(' + colors[lineNumber - 1] + ', .01)';
+    // let colorL = 'rgba(' + colors[lineNumber - 1] + ', .01)';
     let colorR = 'rgba(' + colors[lineNumber - 1] + ', .2)';
+    let colorL = 'linear-gradient(180deg, rgba(' + colors[lineNumber - 1] + ', .01) 10%, ' + colorR + ' 90%)';
+    
+    
+
 
     line.forEach(b => {
         let str_temp = '';
@@ -799,7 +801,7 @@ function bookCards(line, lineNumber) {
             cites +
             '</div>' +
             '</div>' +
-            '<div class="modal__footer" style="background: ' + colorL + '">' +
+            '<div class="modal__footer" style="background: ' + colorR + '">' +
             '<div class="modal__line" style="' + gradBgc + '">' +
             '<svg class="modal__line-left" width=20 height=20>' +
             '<rect x="0" y="0" width="20" height="20" fill="' + colorsFooterIcons[0] + '" rx="4"></rect>' + textNum +
