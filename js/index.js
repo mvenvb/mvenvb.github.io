@@ -8,9 +8,10 @@ const colors = ['75, 84, 132',
     '210, 84, 136'
 ];
 
+// 'transfer': 'background: rgba(75,84,132,1); background: linear-gradient(90deg, rgba(75,84,132,1) 0%, rgba(158,65,83,1) 85%);',
 const lineStations = {
     'line1': [{
-            'transfer': 'background: rgba(75,84,132,1); background: linear-gradient(90deg, rgba(75,84,132,1) 0%, rgba(158,65,83,1) 85%);',
+            'transfer': 'no',
             'book': "Братья Карамазовы",
             'author': "Федор Михайлович Достоевский",
             "about": "Роман представляет собой философское произведение, затрагивающее вопросы о Боге, свободе воли и морали.",
@@ -592,10 +593,17 @@ const lineStations = {
 
 allBookCards();
 
+// $( document ).ready(function() {
+//     // console.log( "ready!" );
+//     allBookCards();
+// });
+
+
 
 // Modal
 const modalCall = $("[data-modal]");
 const modalClose = $("[data-close]");
+
 
 modalCall.on("click", function (event) {
     event.preventDefault();
@@ -618,9 +626,11 @@ modalCall.on("click", function (event) {
     for (i = 1; i < 9; i++) {
         $(sliderLine).slick('setPosition');
     }
-
     let color = 'rgb(' + colors[lineNumber - 1] + ')';
     changeDots(color);
+
+    // $(sliderLine).slick("refresh");
+
 });
 
 modalClose.on("click", function (event) {
@@ -641,7 +651,6 @@ $(".modal").on("click", function (event) {
 $(".modal__dialog").on("click", function (event) {
     event.stopPropagation();
 });
-
 // Slider: https://kenwheeler.github.io/slick/
 for (i = 1; i < 9; i++) {
     let sliderLine = '#sliderLine' + i;
@@ -656,35 +665,40 @@ for (i = 1; i < 9; i++) {
     });
 }
 
-//--------------------------------------------------------------------------
-// щелкаем на название книги, и вылетает нужный слайдер на нужной карточке. NB: разобраться с окраской точечек!!!
-// NB: сделать для рандомной книги. Присвоить надписи каждой класс типа Book , функция Щелкаем на класс Book, внутри выясняем, какая это линия и какой тут id. Может сделать id такой чтобы на первом месте была линия, а на втором номер книжки... Чтобы не ебаться с классом и айди одновременно. 
-const lineHeroic = $('.line__heroic');
-lineHeroic.on("click", function (event) {
+//----------------------------------------------------------------
+// щелкаем на название книги, и вылетает нужный слайдер на нужной карточке.
+//NB: разобраться с окраской точечек!!! И с загрузкой карточки пересадочной станции...
+
+$('.stations__item').on("click", function (event) {
     event.preventDefault();
 
-    let bookNum = $(this).prop('id');
-    bookNum = bookNum.split('').pop();
-    console.log(bookNum);
-    // bookNum.split('').pop().join('')
-    changeDots(colors[0].bg);
-    document.getElementById("line1").classList.add('show');
-    $('#sliderLine1').slick('slickGoTo', bookNum);
+    let stationId = $(this).prop('id').split('-');
+    let line = stationId[0];
+    let bookNum = stationId[1];
 
+    $('#sliderLine' + line).slick("refresh");
+    document.getElementById('line' + line).classList.add('show');
+    $('#sliderLine' + line).slick('slickGoTo', bookNum - 1);
+    
+    changeDots('rgb(' + colors[line-1] + ')');
+    
+
+    
 });
-//--------------------------------------------------------------------------
+//------------------------------------------------------------
 
 
-let dots = document.querySelectorAll('.slick-dots button');
-let dotsActive = document.querySelectorAll('.slick-active button');
+// let dots = document.querySelectorAll('.slick-dots button');
+// let dotsActive = document.querySelectorAll('.slick-active button');
 
 function changeDots(color) {
+    let dots = document.querySelectorAll('.slick-dots button');
+    let dotsActive = document.querySelectorAll('.slick-active button');
     dots.forEach(dot => dot.style.background = color);
     dotsActive.forEach(dot => {
         dot.style.background = color;
     });
 }
-
 
 function allBookCards() {
     for (i = 1; i < 9; i++) {
@@ -692,8 +706,6 @@ function allBookCards() {
         bookCards(lineStations[line], i);
     }
 }
-
-
 
 function bookCards(line, lineNumber) {
     let str = '';

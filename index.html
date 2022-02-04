@@ -17,76 +17,41 @@
 <body>
 
     <!-- <h1 class="text_header">
-        Список литературы для <span class="header_num" id="check_id">11</span> класса от Светланы Федоровны
+        Список литературы для <span class="header_num">11</span> класса от Светланы Федоровны
     </h1> -->
 
 
     <div class="container" id="container">
-        <div class="quote">«Путешествовать между мирами, открывать неизведанное
-            и проживать новые жизни... Для этого не нужна машина
-            времени или звездолёт - достаточно просто открыть книгу.
-            Выбирайте, куда хотите отправиться прямо сейчас»</div>
+        
+        <div class="quote">
+            «Путешествовать между мирами, открывать неизведанное и проживать новые жизни... Для этого не нужна машина времени или звездолёт - достаточно просто открыть книгу. Выбирайте, куда хотите отправиться прямо сейчас»
+        </div>
+
         <div class="container1" id="scheme_container">
-            <!-- <svg class="undeground-scheme" width="1050" height="750" viewBox="0 0 257.67 773" id="scheme" transform="scale(1)"> -->
-            <svg class="undeground-scheme" viewBox="0 0 1050 750" id="scheme" transform="scale(1)">
-                <!-- 1 линия - героическая -->
-                <g class="all">
 
+            <svg class="undeground_scheme" viewBox="0 0 1050 750" id="scheme" transform="scale(1)">
 
-                    <g class="line heroic">
+                <g class="lines">
+
+                    <!-- 1 линия - героическая -->
+                    <g class="lines__heroic">
                         <!-- линия -->
                         <path d="M260,680 L770 225" stroke="#4b5484" stroke-width="8" fill="transparent" />
                         <!-- номер линии -->
                         <rect x="757" y="185" width="26" height="26" fill="#4b5484" rx="10"></rect>
                         <text class="text_num" x="763" y="206">1</text>
-                        <!-- станции -->
-                        <!-- <g class="greentent  heroic">
-                            <circle cx="770" cy="225" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
-                            <text class="text_book" x="785" y="230">Зеленый</text>
-                            <text class="text_book" x="785" y="245">шатер</text>
-                            <text class="text_author" x="785" y="258">Л.Е.Улицкая</text>
-                        </g> -->
-                        <g class="solzhenitsyn  heroic">
-                            <circle cx="683" cy="303" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
-                            <text class="text_book" x="698" y="308">Один день</text>
-                            <text class="text_book" x="698" y="323">Ивана Денисовича</text>
-                            <text class="text_author" x="698" y="336">А.И.Солженицын</text>
-                        </g>
-                        <g class="nekrasov  heroic">
-                            <circle cx="599" cy="378" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
-                            <text class="text_book" x="614" y="383">В окопах</text>
-                            <text class="text_book" x="614" y="398">Сталинграда</text>
-                            <text class="text_author" x="614" y="411">В.П.Некрасов</text>
-                        </g>
-                        <!-- <g class="fadeev">
-                            <circle cx="514" cy="453" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
-                            <text class="text_book" x="529" y="458">Молодая гвардия</text>
-                            <text class="text_author" x="529" y="471">А.А.Фадеев</text>
-                        </g> -->
-                        <g class="ostrovsky">
-                            <circle cx="431" cy="527" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
-                            <text class="text_book" x="446" y="532">Как закалялась</text>
-                            <text class="text_book" x="446" y="547">сталь</text>
-                            <text class="text_author" x="446" y="560">Н.А.Островский</text>
-                        </g>
-                        <g class="bunin">
-                            <circle cx="348" cy="602" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
-                            <text class="text_book" x="363" y="607">Окаянные дни</text>
-                            <text class="text_author" x="363" y="620">И.А.Бунин</text>
-                        </g>
                     </g>
-                    <!-- ///1 линия - героическая -->
-
+                    <!-- //1 линия - героическая -->
 
                     <!-- 2 линия - психологическая -->
-                    <g class="line psychological">
+                    <g class="lines__psychological">
                         <!-- линия -->
                         <path d="M44 575 Q500,530 530 105" stroke-width="8" stroke="#46cca6" fill="transparent" />
                         <!-- номер линии -->
                         <rect x="4" y="562" width="26" height="26" fill="#46cca6" rx="10"></rect>
                         <text class="text_num" x="10" y="583">2</text>
                         <!-- станции -->
-                        <g class="behterev">
+                        <!-- <g class="behterev">
                             <circle cx="530" cy="105" r="9" stroke="#fff" stroke-width="2" fill="#46cca6"></circle>
 
                             <text class="text_book" x="537" y="125">Феномены</text>
@@ -119,13 +84,13 @@
                             <text class="text_book" x="186" y="567">Последняя</text>
                             <text class="text_book" x="186" y="582">лекция</text>
                             <text class="text_author" x="186" y="595">Р.Паум</text>
-                        </g>
+                        </g> -->
                     </g>
-                    <!-- ///2 линия - психологическая -->
+                    <!-- //2 линия - психологическая -->
 
 
                     <!-- 3 линия - естественно-научная -->
-                    <g class="line naturalscience">
+                    <g class="lines__naturalscience">
                         <!-- линия -->
                         <path d="M735 500 V 400 Q735 360 775 360 H 860 Q900 360 900 320 V 145 Q900 105 860 105 H 530"
                             stroke="#aed088" stroke-width="8" fill="transparent" />
@@ -178,11 +143,11 @@
                             <text class="text_author" x="674" y="138">А.Кронин</text>
                         </g>
                     </g>
-                    <!-- ///3 линия - естественно-научная -->
+                    <!-- //3 линия - естественно-научная -->
 
 
                     <!-- 4 линия - детективная -->
-                    <g class="line detective">
+                    <g class="lines__detective">
                         <!-- линия -->
                         <path d="M415 680 L 565 545 Q615 500 665 500 H 980" stroke-width="8" stroke="#f9bd53"
                             fill="transparent" />
@@ -225,11 +190,11 @@
                             <text class="text_author" x="958" y="535">Д.Браун</text>
                         </g>
                     </g>
-                    <!-- ///4 линия - детективная -->
+                    <!-- //4 линия - детективная -->
 
 
                     <!-- 5 линия - историческая -->
-                    <g class="line historical">
+                    <g class="lines__historical">
                         <!-- линия -->
                         <path d="M310 295 H 260 Q44,295 44 485 V 580 Q44,680 200 680 H 570" stroke="#9e4153"
                             stroke-width="8" fill="transparent" />
@@ -249,21 +214,14 @@
                             <text class="text_book" x="58" y="495">Авиатор</text>
                             <text class="text_author" x="58" y="508">Е.Г.Водолазкин</text>
                         </g>
-                        <g class="redfield">
-                            <circle cx="44" cy="576" r="9" stroke="#fff" stroke-width="2" fill='#fff'></circle>
-                            <path d="M 44,575 v-7 a1,1 0 0,0 0,16 z" fill="#46cca6" stroke-width="0" />
-                            <path d="M 44,575 v-7 a1,1 0 0,1 0,16 z" fill="#9e4153" stroke-width="0" />
-                            <text class="text_book" x="55" y="591">Селестинские</text>
-                            <text class="text_book" x="58" y="606">пророчества</text>
-                            <text class="text_author" x="67" y="619">Дж.Редфилд</text>
-                        </g>
-                        <g class="dostoevsky">
+                        
+                        <!-- <g class="dostoevsky">
                             <circle cx="260" cy="681" r="9" stroke="#fff" stroke-width="2" fill='#fff'></circle>
                             <path d="M260,680 v-7 a1,1 0 0,0 0,16 z" fill="#4b5484" stroke-width="0" />
                             <path d="M260,680 v-7 a1,1 0 0,1 0,16 z" fill="#9e4153" stroke-width="0" />
                             <text class="text_book" x="190" y="701">Братья Карамазовы</text>
                             <text class="text_author" x="208" y="714">Ф.М.Достоевский</text>
-                        </g>
+                        </g> -->
                         <g class="roberts">
                             <circle cx="415" cy="681" r="9" stroke="#fff" stroke-width="2" fill='#fff'></circle>
                             <path d="M 415,680 v-7 a1,1 0 0,0 0,16 z" fill="#f9bd53" stroke-width="0" />
@@ -277,11 +235,11 @@
                             <text class="text_author" x="540" y="714">Э.Л.Войнич</text>
                         </g>
                     </g>
-                    <!-- ///5 линия - историческая -->
+                    <!-- //5 линия - историческая -->
 
 
                     <!-- 6 линия - сентиментальная -->
-                    <g class="line sentimental">
+                    <g class="lines__sentimental">
                         <!-- линия -->
                         <path d="M44 48 H 235 C 270 48, 310 78, 310 120 V 280 C 310 340,  275 370, 240 370 H 220"
                             stroke="#ff9d8d" stroke-width="8" fill="transparent" />
@@ -310,14 +268,6 @@
                             <text class="text_book" x="305" y="67">Поющие в терновнике</text>
                             <text class="text_author" x="305" y="80">К.Маккалоу</text>
                         </g>
-                        <!-- <g class="gilbert way-station">
-                <circle cx="310" cy="140" r="9" stroke="#fff" stroke-width="2" fill='#ff9d8d'></circle>
-                <text class="text_book" x="322" y="162">Есть.</text>
-                <text class="text_book" x="322" y="177">Молиться.</text>
-                <text class="text_book" x="322" y="192">Любить.</text>
-                <text class="text_author" x="322" y="205">Э.Гилберт</text>
-            </g> -->
-
                         <g class="dumas">
                             <circle cx="310" cy="296" r="9" stroke="#fff" stroke-width="2" fill='#fff'></circle>
                             <path d="M 310,295 v-7 a1,1 0 0,0 0,16 z" fill="#ff9d8d" stroke-width="0" />
@@ -331,11 +281,11 @@
                             <text class="text_author" x="184" y="402">Э.М.Ремарк</text>
                         </g>
                     </g>
-                    <!-- ///6 линия - сентиментальная -->
+                    <!-- //6 линия - сентиментальная -->
 
 
                     <!-- 7 линия - социально-философская -->
-                    <g class="line social">
+                    <g class="lines__social">
                         <!-- линия -->
                         <path d="M44 140 H 455" stroke="#2b6e70" stroke-width="8" fill="transparent" />
 
@@ -375,15 +325,13 @@
                             <text class="text_author" x="433" y="187">Ф.Саган</text>
                         </g>
                     </g>
-                    <!-- ///7 линия - социально-философская -->
+                    <!-- //7 линия - социально-философская -->
 
 
                     <!-- 8 линия - фантастическая -->
-                    <g class="line fantastic">
+                    <g class="lines__fantastic">
                         <!-- линия -->
-                        <path
-                            d="M400,230 H 80 Q44,230 44 285 V 310 Q44,355 80,355 H 117 Q153,355 153 390 V 405 Q153,440 188 440 H 295"
-                            stroke-width="8" stroke="#d25488" fill="transparent" />
+                        <path d="M400,230 H 80 Q44,230 44 285 V 310 Q44,355 80,355 H 117 Q153,355 153 390 V 405 Q153,440 188 440 H 295" stroke-width="8" stroke="#d25488" fill="transparent" />
 
                         <!-- номер линии -->
                         <rect x="387" y="190" width="26" height="26" fill="#d25488" rx="10"></rect>
@@ -434,21 +382,98 @@
                             <text class="text_author" x="360" y="264">Бр.Стругацкие</text>
                         </g>
                     </g>
-                    <!-- ///8 линия - фантастическая -->
+                    <!-- //8 линия - фантастическая -->
 
                     <!-- станции -->
-                    <g class="text">
-                        <g class="greentent  line__heroic" id='h6'>
+                    <g class="stations">
+
+                        <!-- 1 линия - героическая -->
+                        <g class='stations__item heroic' id='1-1'>
+                            <circle cx="260" cy="681" r="9" stroke="#fff" stroke-width="2" fill='#fff'></circle>
+                            <path d="M260,680 v-7 a1,1 0 0,0 0,16 z" fill="#4b5484" stroke-width="0" />
+                            <path d="M260,680 v-7 a1,1 0 0,1 0,16 z" fill="#9e4153" stroke-width="0" />
+                            <text class="text_book" x="190" y="701">Братья Карамазовы</text>
+                            <text class="text_author" x="208" y="714">Ф.М.Достоевский</text>
+                        </g>
+                        <g class="stations__item heroic" id='1-2'>
+                            <circle cx="348" cy="602" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
+                            <text class="text_book" x="363" y="607">Окаянные дни</text>
+                            <text class="text_author" x="363" y="620">И.А.Бунин</text>
+                        </g>
+                        <g class="stations__item heroic" id='1-3'>
+                            <circle cx="431" cy="527" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
+                            <text class="text_book" x="446" y="532">Как закалялась</text>
+                            <text class="text_book" x="446" y="547">сталь</text>
+                            <text class="text_author" x="446" y="560">Н.А.Островский</text>
+                        </g>
+                        <g class="stations__item heroic" id='1-4'>
+                            <circle cx="514" cy="453" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
+                            <text class="text_book" x="529" y="458">Молодая гвардия</text>
+                            <text class="text_author" x="529" y="471">А.А.Фадеев</text>
+                        </g>
+                        <g class="stations__item heroic" id='1-5'>
+                            <circle cx="599" cy="378" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
+                            <text class="text_book" x="614" y="383">В окопах</text>
+                            <text class="text_book" x="614" y="398">Сталинграда</text>
+                            <text class="text_author" x="614" y="411">В.П.Некрасов</text>
+                        </g>
+                        <g class="stations__item heroic" id='1-6'>
+                            <circle cx="683" cy="303" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
+                            <text class="text_book" x="698" y="308">Один день</text>
+                            <text class="text_book" x="698" y="323">Ивана Денисовича</text>
+                            <text class="text_author" x="698" y="336">А.И.Солженицын</text>
+                        </g>
+                        <g class="stations__item heroic" id='1-7'>
                             <circle cx="770" cy="225" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
                             <text class="text_book" x="785" y="230">Зеленый</text>
                             <text class="text_book" x="785" y="245">шатер</text>
                             <text class="text_author" x="785" y="258">Л.Е.Улицкая</text>
                         </g>
-                        <g class="fadeev line__heroic" id='h3'>
-                            <circle cx="514" cy="453" r="9" stroke="#fff" stroke-width="2" fill="#4b5484"></circle>
-                            <text class="text_book" x="529" y="458">Молодая гвардия</text>
-                            <text class="text_author" x="529" y="471">А.А.Фадеев</text>
+                        <!-- //1 линия - героическая -->
+
+                        <!-- 2 линия - психологическая -->
+                        <g class="stations__item psychological" id='2-1'>
+                            <circle cx="44" cy="576" r="9" stroke="#fff" stroke-width="2" fill='#fff'></circle>
+                            <path d="M 44,575 v-7 a1,1 0 0,0 0,16 z" fill="#46cca6" stroke-width="0" />
+                            <path d="M 44,575 v-7 a1,1 0 0,1 0,16 z" fill="#9e4153" stroke-width="0" />
+                            <text class="text_book" x="55" y="591">Селестинские</text>
+                            <text class="text_book" x="58" y="606">пророчества</text>
+                            <text class="text_author" x="67" y="619">Дж.Редфилд</text>
                         </g>
+                        <g class="stations__item psychological" id='2-2'>
+                            <circle cx="170" cy="553" r="9" stroke="#fff" stroke-width="2" fill="#46cca6"></circle>
+                            <text class="text_book" x="186" y="567">Последняя</text>
+                            <text class="text_book" x="186" y="582">лекция</text>
+                            <text class="text_author" x="186" y="595">Р.Паум</text>
+                        </g>
+                        <g class="stations__item psychological" id='2-3'>
+                            <circle cx="297" cy="505" r="9" stroke="#fff" stroke-width="2" fill="#46cca6"></circle>
+                            <text class="text_book" x="313" y="512">Лидерство</text>
+                            <text class="text_book" x="313" y="527">Мацуситы</text>
+                            <text class="text_author" x="313" y="540">Д.Коттер</text>
+                        </g>
+                        <g class="stations__item psychological" id='2-4'>
+                            <circle cx="398" cy="431" r="9" stroke="#fff" stroke-width="2" fill="#46cca6"></circle>
+                            <text class="text_book" x="412" y="436">Хочу и буду</text>
+                            <text class="text_author" x="412" y="449">М.А.Лабковский</text>
+                        </g>
+                        <g class="stations__item psychological" id='2-5'>
+                            <circle cx="473" cy="328" r="9" stroke="#fff" stroke-width="2" fill="#46cca6"></circle>
+                            <text class="text_book" x="485" y="333">Развивай свой мозг</text>
+                            <text class="text_author" x="485" y="346">Д.Диспенза</text>
+                        </g>
+                        <g class="stations__item psychological" id='2-6'>
+                            <circle cx="512" cy="220" r="9" stroke="#fff" stroke-width="2" fill="#46cca6"></circle>
+                            <text class="text_book" x="522" y="225">Дорога в подсознание</text>
+                            <text class="text_author" x="522" y="238">О.П.Найденова</text>
+                        </g>
+                        <g class="stations__item psychological" id='2-7'>
+                            <circle cx="530" cy="105" r="9" stroke="#fff" stroke-width="2" fill="#46cca6"></circle>
+                            <text class="text_book" x="537" y="125">Феномены</text>
+                            <text class="text_book" x="537" y="140">мозга</text>
+                            <text class="text_author" x="537" y="153">В.М.Бехтерев</text>
+                        </g>
+                        <!-- //2 линия - психологическая -->
                     </g>
                 </g>
             </svg>
