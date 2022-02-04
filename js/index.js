@@ -8,10 +8,9 @@ const colors = ['75, 84, 132',
     '210, 84, 136'
 ];
 
-// 'transfer': 'background: rgba(75,84,132,1); background: linear-gradient(90deg, rgba(75,84,132,1) 0%, rgba(158,65,83,1) 85%);',
 const lineStations = {
     'line1': [{
-            'transfer': 'no',
+            'transfer': 'background: rgba(75,84,132,1); background: linear-gradient(90deg, rgba(75,84,132,1) 0%, rgba(158,65,83,1) 85%);',
             'book': "Братья Карамазовы",
             'author': "Федор Михайлович Достоевский",
             "about": "Роман представляет собой философское произведение, затрагивающее вопросы о Боге, свободе воли и морали.",
