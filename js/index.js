@@ -647,6 +647,13 @@ $(".modal").on("click", function (event) {
     $("body").removeClass("no-scroll");
 });
 
+$(".modal__close").on("click", function (event) {
+    $(".modal").removeClass("show");
+    $("body").removeClass("no-scroll");
+});
+
+
+
 $(".modal__dialog").on("click", function (event) {
     event.stopPropagation();
 });
@@ -658,8 +665,8 @@ for (i = 1; i < 9; i++) {
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
-        prevArrow: '<img class="modal__btn modal__btn--prev slickPrev" src="./assets/img/cards/left-arrow.svg" alt="">',
-        nextArrow: '<img class="modal__btn modal__btn--next slickNext" src="./assets/img/cards/right-arrow.svg" alt="">',
+        prevArrow: '<div class = "modal__arrow modal__arrow--left slickPrev"><img class="arrow__icon" src="./assets/img/cards/left-arrow.svg" alt=""></div>',
+        nextArrow: '<div class = "modal__arrow modal__arrow--right slickNext"><img class="arrow__icon" src="./assets/img/cards/right-arrow.svg" alt=""></div>',
         dots: true,
     });
 }
@@ -777,6 +784,7 @@ function bookCards(line, lineNumber) {
             '<div class="modal__card">' +
             '<div>' +
             '<div class="modal__title" style="' + gradBgc + '">' +
+            '<div class="modal__close"><img src="./assets/img/cards/close.svg"></div>' +
             '<div class="modal__text">' +
             '<span class="modal__book">' +
             b.book +
