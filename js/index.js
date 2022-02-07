@@ -677,7 +677,8 @@ $('.stations__item').on("click", function (event) {
 
     $('#sliderLine' + line).slick("refresh");
     document.getElementById('line' + line).classList.add('show');
-    $('#sliderLine' + line).slick('slickGoTo', bookNum);
+    $('#sliderLine' + line).slick('slickGoTo', bookNum, true);
+    // $('#sliderLine' + line).slick('initialSlide', bookNum);
     
     changeDots('rgb(' + colors[line-1] + ')');
     
