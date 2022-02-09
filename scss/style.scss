@@ -1,0 +1,18 @@
+//helpers
+@import "helpers/variables";
+@import "helpers/normalize";
+@import "helpers/standart";
+
+
+//layout
+@import "layout/responsive";
+
+// components
+@import "components/modal";
+
+
+
+//pages
+@import "pages/main";
+@import "pages/scheme";
+

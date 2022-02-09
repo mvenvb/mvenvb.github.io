@@ -1,0 +1,340 @@
+//Container
+.container--scheme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    position: relative;
+}
+
+// .container--scheme:before {
+//     content: ' ';
+//     display: block;
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     width: 100%;
+//     height: 100%;
+//     opacity: 0.1;
+//     background-image: url(../assets/img/bg.jpg);
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-size: cover;
+// }
+
+.container1 {
+    position: relative;
+    width: 70%;
+    height: 100vh;
+}
+
+.container2 {
+    width: 22%;
+}
+
+// ссылка
+.scheme__a {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    width: 20%;
+    padding: 3px;
+    display: block;
+
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: .1rem;
+    border: 1px solid #000;
+    border-radius: 5px;
+    // text-transform: lowercase;
+    font-weight: 700;
+}
+
+.scheme__a:hover, .scheme__a:focus {
+    // font-weight: 700;
+    box-shadow: 5px 5px 5px rgba(#000, 0.4);
+}
+
+//svg undeground scheme
+.underground_scheme {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.text_book {
+    font-weight: 700;
+
+    transition: all .1s linear;
+}
+
+.text_author {
+    font-size: 11px;
+    fill: #949390;
+    font-weight: 700;
+}
+
+.text_num {
+    font-size: 22px;
+    font-weight: 700;
+    fill: #fff;
+    font-family: $numbers-font;
+}
+
+.text_num--modal {
+    font-size: 16px;
+    font-family: $font;
+}
+
+.text_header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #000;
+}
+
+.circle {
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    padding: 10px;
+    background: #fff;
+    border: 3px solid #000;
+    color: #000;
+    text-align: center;
+    line-height: 30px;
+    font: 32px $numbers-font;
+}
+
+/* Stations */
+.stations {
+    .stations__item {
+        &:hover {
+            cursor: pointer;
+        }
+        &:hover .text_book {
+            letter-spacing: .05rem;
+        }
+        
+        &:hover circle {
+            fill: #fff;
+            stroke-width: 4;
+            r: 7;
+        
+            transition: all .2s linear;
+        }
+        
+        &:hover.heroic .text_book {
+            fill: $color-line1;
+        }
+        
+        &:hover.heroic circle {
+            stroke: $color-line1;
+        }
+        
+        &:hover.psychological .text_book {
+            fill: $color-line2;
+        }
+        
+        &:hover.psychological circle {
+            stroke: $color-line2;
+        }
+        
+        &:hover.naturalscience .text_book {
+            fill: $color-line3;
+        }
+        
+        &:hover.naturalscience circle {
+            stroke: $color-line3;
+        }
+        
+        &:hover.detective .text_book {
+            fill: $color-line4;
+        }
+        
+        &:hover.detective circle {
+            stroke: $color-line4;
+        }
+        
+        &:hover.historical .text_book {
+            fill: $color-line5;
+        }
+        
+        &:hover.historical circle {
+            stroke: $color-line5;
+        }
+        
+        &:hover.sentimental .text_book {
+            fill: $color-line6;
+        }
+        
+        &:hover.sentimental circle {
+            stroke: $color-line6;
+        }
+        
+        &:hover.social .text_book {
+            fill: $color-line7;
+        }
+        
+        &:hover.social circle {
+            stroke: $color-line7;
+        }
+        
+        &:hover.fantastic .text_book {
+            fill: $color-line8;
+        }
+        
+        &:hover.fantastic circle {
+            stroke: $color-line8;
+        }
+
+    }
+}
+
+
+//Designations
+.designations {
+    list-style: none;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__item {
+        font-weight: bold;
+
+        display: inline-flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    &__item:last-child {
+        margin-bottom: 0;
+    }
+
+    &__item:hover {
+        cursor: pointer;
+    }
+
+    &__line {
+        display: flex;
+        align-items: center;
+    }
+
+    &__number {
+        width: 25px;
+        height: 25px;
+        border: 1px solid #000;
+        border-radius: 40%;
+    
+        margin-right: 10px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        font-family: $numbers-font;
+        font-size: 18px;
+    
+        transition: all .1s linear;
+    }
+    
+    &__title {
+        font-size: 10px;
+        text-transform: uppercase;
+        text-align: left;
+        // letter-spacing: .1rem;
+
+    
+        transition: color .1s linear;
+    }
+}
+
+.one:hover .designations__number {
+    color: #fff;
+    background-color: $color-line1;
+    border-color: $color-line1;
+}
+
+.one:hover .designations__title {
+    color: $color-line1;
+}
+
+.two:hover .designations__number {
+    color: #fff;
+    background-color: $color-line2;
+    border-color: $color-line2;
+}
+
+.two:hover .designations__title {
+    color: $color-line2;
+}
+
+.three:hover .designations__number {
+    color: #fff;
+    background-color: $color-line3;
+    border-color: $color-line3;
+}
+
+.three:hover .designations__title {
+    color: $color-line3;
+}
+
+.four:hover .designations__number {
+    color: #fff;
+    background-color: $color-line4;
+    border-color: $color-line4;
+}
+
+.four:hover .designations__title {
+    color: $color-line4;
+}
+
+.five:hover .designations__number {
+    color: #fff;
+    background-color: $color-line5;
+    border-color: $color-line5;
+}
+
+.five:hover .designations__title {
+    color: $color-line5;
+}
+
+.six:hover .designations__number {
+    color: #fff;
+    background-color: $color-line6;
+    border-color: $color-line6;
+}
+
+.six:hover .designations__title {
+    color: $color-line6;
+}
+
+.seven:hover .designations__number {
+    color: #fff;
+    background-color: $color-line7;
+    border-color: $color-line7;
+}
+
+.seven:hover .designations__title {
+    color: $color-line7;
+}
+
+.eight:hover .designations__number {
+    color: #fff;
+    background-color: $color-line8;
+    border-color: $color-line8;
+}
+
+.eight:hover .designations__title {
+    color: $color-line8;
+}

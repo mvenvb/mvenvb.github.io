@@ -1,0 +1,288 @@
+/* Modal */
+.modal {
+    width: 100%;
+    height: 100%;
+    display: none;
+    padding: 0 1rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    background-color: rgba(0, 0, 0, 0.8);
+
+    &.show {
+        display: flex;
+    }
+
+    &__dialog {
+        position: relative;
+    
+        width: 90%;
+        max-width: 900px;
+        height: auto;
+        margin: auto;
+    
+        padding: 0 0;
+        background-color: #EFF0F1;
+    
+        border-radius: 5px;
+    }
+
+    // стрелки для перехода между слайдами
+    &__arrow {
+        background-color: rgba(95, 95, 95, 0.2);
+        ;
+    
+        height: 525px;
+        width: 50px;
+    
+        position: absolute;
+        top: 0;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        transition: background-color .2s linear;
+    }
+
+    &__arrow--left {
+        left: -48px;
+    }
+    
+    &__arrow--right {
+        right: -48px;
+    }
+    
+    &__arrow:hover {
+        background-color: rgba(163, 162, 162, 0.3);
+    }
+
+    &__arrow-icon {
+        width: 20px;
+        height: auto;
+    }
+
+    // заголовок карточки
+    &__title {
+        text-align: center;
+        color: #fff;
+        font-weight: 700;
+    
+        height: 9%;
+        width: 100%;
+        border-radius: 5px 5px 0 0;
+        padding: 5px 10px;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        position: relative;
+    }
+    
+    // кнопка на закрытие слайда
+    &__close {
+        width: 45px;
+        height: 100%;
+    
+        position: absolute;
+        right: 0;
+    
+        cursor: pointer;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__close img {
+        display: block;
+    }
+    
+    &__close:hover img {
+        transform: rotateZ(90deg);
+        transition: transform .2s linear;
+    }
+
+    &__book {
+        font-size: 28px;
+        line-height: 33px;
+    
+        margin-right: 20px;
+    }
+    
+    &__author {
+        font-size: 20px;
+        letter-spacing: .1rem;
+    }
+    
+    &__content {
+        display: flex;
+        height: 450px;
+    
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        color: #000;
+    }
+    
+    &__par p {
+        margin: 5px 0 7px;
+    }
+    
+    &__left,
+    &__right {
+        padding: 30px 10px;
+    }
+
+    // левая часть карточки
+    &__left {
+        width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__films {
+        display: flex;
+        align-items: center;
+    }
+    
+    &__films {
+        margin-bottom: 7px;
+    }
+    
+    &__films:last-child {
+        margin-bottom: 0;
+    }
+    
+    &__film {
+    
+        text-decoration: none;
+        color: #000;
+    
+        position: relative;
+    }
+    
+    &__film::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+        background-color: #000;
+        content: "";
+        transition: width 0.3s ease-out;
+    }
+    
+    &__film:hover:after,
+    &__film:focus:after {
+        width: 100%;
+        /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+    }
+
+    &__icon {
+        margin-right: 5px;
+    }
+    
+    &__icon img {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+    }
+    
+    // правая часть карточки
+    &__right {
+        background-color: rgba(111, 117, 174, .2);
+    
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    
+    &__h2 {
+        font-weight: 700;
+    
+        margin-bottom: 10px;
+    }
+
+    // футер карточки
+    &__footer {
+        height: 30px;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        position: relative;
+    }
+    
+    &__line {
+        width: 99%;
+        height: 8px;
+    
+        background-color: #6F75AE;
+    
+        position: absolute;
+        top: 11px;
+    }
+    
+    &__line-left {
+        position: absolute;
+        top: -5px;
+        left: 0;
+    }
+    
+    &__line-right {
+        position: absolute;
+        top: -5px;
+        right: 0;
+    }
+
+    &__stations {
+        width: 97%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        z-index: 10;
+    }
+    
+    &__station {
+        width: 16px;
+        height: 16px;
+    
+        border-radius: 50%;
+    }
+    
+    &__station--active {
+        border: solid 5px transparent;
+    
+        width: 20px;
+        height: 20px;
+    
+        background-color: #fff;
+    
+        position: relative;
+    }
+    
+    &__station--active::after {
+        content: '';
+    
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color: transparent;
+    
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        z-index: 11;
+    }
+}

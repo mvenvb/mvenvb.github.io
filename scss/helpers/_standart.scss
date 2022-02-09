@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+    line-height: 1.6;
+    font-family: $font;
+    color: #000;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.body.no-scroll {
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Container */
+.container {
+    margin: 0 auto;
+
+    max-width: 1230px;
+    width: 100%;
+    overflow: hidden;
+}
+
+button {
+    padding: 0;
+
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
