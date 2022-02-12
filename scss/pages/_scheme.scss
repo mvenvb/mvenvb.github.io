@@ -84,7 +84,7 @@
 }
 
 .text_num--modal {
-    font-size: 16px;
+    font-size: 14px;
     font-family: $font;
 }
 
@@ -337,4 +337,77 @@
 
 .eight:hover .designations__title {
     color: $color-line8;
+}
+
+
+@media (max-width: 1440px) {
+    .designations__number {
+        font-size: 14px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .designations__title {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 1230px) {
+    .info {
+        &__item {
+            font-size: 10px;
+        }
+    }
+}
+
+@media (max-width: 990px) {
+
+    .modal__book {
+        font-size: 19px;
+        line-height: 27px;
+    }
+
+    .modal__author {
+        font-size: 14px;
+    }
+
+    .modal__content {
+        font-size: 12px;
+
+        height: 420px;
+    }
+
+    .modal__left,
+    .modal__right {
+        padding: 15px 10px;
+    }
+
+    .designations__title {
+        font-size: 8px;
+    }
+
+    .designations__item {
+        margin-bottom: 10px;
+    }
+
+    .modal__arrow {
+        height: 447px;
+        width: 35px;
+    }
+
+    .modal__arrow--left {
+        left: -33px;
+    }
+
+    .modal__arrow--right {
+        right: -33px;
+    }
+
+    .info {
+        width: 50%;
+        &__item {
+            width: 49%;
+            font-size: 9px;
+        }
+    }
 }

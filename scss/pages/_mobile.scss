@@ -1,0 +1,157 @@
+.menu__burger {
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	transform: translateY(-50%);
+
+	z-index: 2;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.menu-btn {
+	width: 20px;
+	height: 20px;
+	position: relative;
+
+	overflow: hidden;
+	// margin-left: 30px;
+}
+
+.menu-btn span {
+	width: 20px;
+	height: 2px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #222222;
+	transition: all 0.5s;
+}
+
+.menu-btn span:nth-of-type(2) {
+	top: calc(50% - 5px);
+}
+
+.menu-btn span:nth-of-type(3) {
+	top: calc(50% + 5px);
+}
+
+.menu-btn.active span:nth-of-type(1) {
+	display: none;
+}
+
+.menu-btn.active span:nth-of-type(2) {
+	top: 50%;
+	transform: translate(-50%, 0%) rotate(45deg);
+	// background-color: $header-color;
+}
+
+.menu-btn.active span:nth-of-type(3) {
+	top: 50%;
+	transform: translate(-50%, 0%) rotate(-45deg);
+	// background-color: $header-color;
+}
+
+.menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	margin-top: 10vh;
+
+	background: $header-color;
+	box-shadow: 0 7px 5px rgba(#000, 0.4);
+
+	transform: translateY(-200%);
+	transition: transform 0.5s;
+
+	&.active {
+		transform: translateY(0);
+		z-index: 1000;
+	}
+
+	&__item {
+		list-style-type: none;
+
+		height: 5vh;
+		
+		display: flex;
+		align-items: center;
+
+		font-weight: 700;
+		letter-spacing: .1rem;
+		text-transform: uppercase;
+		color: #fff;
+		padding: 0 20px;
+		line-height: 12px;
+
+		transition: color .2s linear;
+	}
+
+	@for $i from 1 through 8 {
+		.menu__item:nth-child(#{$i}) {
+			background-color: #{nth($colors, $i)};
+			// background: linear-gradient(90deg, #{nth($colors, $i)} 85%, $header-color 50%);
+		}
+	}
+
+	&__item:hover {
+		color: #000;
+		cursor: pointer;
+	}
+
+
+}
+
+.content {
+	margin: 30px 0;
+	width: 100%;
+	padding: 0 20px;
+	overflow: hidden;
+}
+
+.phrase {
+	margin: 50px 0;
+	width: 100%;
+	overflow: hidden;
+
+}
+
+.phrase__text {
+	padding: 0 20px;
+
+    color: #000;
+    font-family: $font;
+    font-size: 20px;
+	font-weight: 700;
+	letter-spacing: .1rem;
+	text-align: center;
+
+	width: 100%;
+}
+
+.line {
+	&--heroic {
+		background-color: $color-line1;
+	}
+
+	&__title {
+		padding: 0 20px;
+		height: 7vh;
+
+		display: flex;
+		align-items: center;
+
+		background-color: $color-line1;
+
+		color: #fff;
+		font-size: 16px;
+		letter-spacing: .1rem;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}
