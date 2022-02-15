@@ -352,14 +352,6 @@
     }
 }
 
-@media (max-width: 1230px) {
-    .info {
-        &__item {
-            font-size: 10px;
-        }
-    }
-}
-
 @media (max-width: 990px) {
 
     .modal__book {
@@ -401,13 +393,5 @@
 
     .modal__arrow--right {
         right: -33px;
-    }
-
-    .info {
-        width: 50%;
-        &__item {
-            width: 49%;
-            font-size: 9px;
-        }
     }
 }

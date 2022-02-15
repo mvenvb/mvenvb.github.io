@@ -155,6 +155,11 @@ body {
   max-width: 1230px;
   width: 100%;
   overflow: hidden; }
+  .container--main {
+    position: relative;
+    margin: 20px auto 0;
+    max-width: 1230px;
+    width: 100%; }
 
 button {
   padding: 0;
@@ -358,7 +363,7 @@ button {
     width: 100%; }
   .header__title {
     font-family: "Raleway", sans-serif;
-    font-size: 2vh;
+    font-size: 25px;
     letter-spacing: .1rem;
     text-transform: uppercase;
     font-weight: 700;
@@ -367,63 +372,55 @@ button {
   .header__title span {
     font-family: "Arial", sans-serif; }
 
+@media (max-width: 770px) {
+  .header__title {
+    font-size: 20px; } }
+@media (max-width: 540px) {
+  .header__title {
+    font-size: 16px; } }
 .accordion {
   width: 100%;
   margin: 0 auto;
   color: black;
   background-color: white; }
-
-.accordion .accordion__container {
-  position: relative; }
-
-.accordion .accordion__label {
-  position: relative;
-  padding: 10px 20px;
-  font-size: 20px;
-  color: black;
-  font-weight: 700;
-  letter-spacing: .1rem;
-  background: #fff;
-  transition: .2s;
-  cursor: pointer; }
-
-.accordion__label:hover {
-  background: rgba(75, 84, 132, 0.2); }
-
-.accordion__active .accordion__label {
-  background: rgba(75, 84, 132, 0.2); }
-
-.accordion .accordion__label::before {
-  content: '+';
-  color: black;
-  position: absolute;
-  top: 50%;
-  right: 20px;
-  font-size: 30px;
-  transform: translateY(-50%); }
-
-.accordion .accordion__content {
-  position: relative;
-  background: white;
-  height: 0;
-  font-size: 16px;
-  text-align: justify;
-  overflow: hidden;
-  transition: height 0.5s linear; }
-
-.accordion .accordion__content .modal__content {
-  font-size: 16px; }
-
-.accordion hr {
-  margin: 0;
-  border: 1px solid grey; }
-
-.accordion .accordion__container.accordion__active .accordion__content {
-  height: auto; }
-
-.accordion .accordion__container.accordion__active .accordion__label::before {
-  content: '-';
-  font-size: 30px; }
+  .accordion__container {
+    position: relative; }
+  .accordion__label {
+    position: relative;
+    padding: 5px 10px;
+    font-size: 18px;
+    color: black;
+    font-weight: 700;
+    background: #fff;
+    transition: .2s;
+    cursor: pointer; }
+  .accordion__label:hover {
+    background: rgba(75, 84, 132, 0.2); }
+  .accordion__active .accordion__label {
+    background: rgba(75, 84, 132, 0.2); }
+  .accordion__label::before {
+    content: '+';
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    font-size: 25px;
+    transform: translateY(-50%); }
+  .accordion__content {
+    position: relative;
+    background: white;
+    height: 0;
+    font-size: 16px;
+    text-align: justify;
+    overflow: hidden;
+    transition: height 0.5s linear; }
+  .accordion__container.accordion__active .accordion__content {
+    height: auto; }
+  .accordion__container.accordion__active .accordion__label::before {
+    content: '-'; }
+  .accordion hr {
+    margin: 0;
+    border: 1px solid grey; }
 
 .card {
   display: flex;
@@ -432,10 +429,17 @@ button {
   font-size: 16px;
   line-height: 19px;
   color: #000; }
+  .card__author {
+    font-weight: normal; }
+  .card__title {
+    font-weight: 700;
+    margin: 15px 0 5px; }
+    .card__title:first-child {
+      margin-top: 0; }
   .card__text {
-    margin: 5px 0 7px; }
+    margin: 5px 0; }
   .card__left, .card__right {
-    padding: 30px 10px; }
+    padding: 10px; }
   .card__left {
     width: 55%;
     display: flex;
@@ -477,21 +481,28 @@ button {
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
-  .card__title {
-    font-weight: 700;
-    margin-bottom: 10px; }
+  .card__information {
+    padding-left: 15px;
+    position: relative; }
+  .card__information::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #000;
+    top: 6px;
+    left: 0;
+    position: absolute; }
+  .card__facts .card__information {
+    margin-bottom: 5px; }
+    .card__facts .card__information:last-child {
+      margin-bottom: 0; }
 
 @media (max-width: 770px) {
   .card__left, .card__right {
     width: 100%; }
   .card__left {
     padding-bottom: 0; } }
-.container--main {
-  position: relative;
-  margin: 0 auto;
-  max-width: 1230px;
-  width: 100%; }
-
 .info {
   width: 75%;
   margin: 0 auto;
@@ -588,8 +599,7 @@ button {
     width: 32%; } }
 @media (max-width: 990px) {
   .info {
-    width: 70%;
-    justify-content: space-evenly; }
+    width: 70%; }
     .info__item {
       width: 48%;
       font-size: 1.5vw; }
@@ -602,18 +612,22 @@ button {
   .header__logo {
     display: none; } }
 @media (max-width: 770px) {
-  .info {
-    width: 50%;
-    justify-content: space-evenly; }
-    .info__item {
-      width: 100%;
-      font-size: 2.7vw; }
+  .info__item {
+    width: 100%;
+    font-size: 2.7vw; }
 
   .main__text {
     width: 50%; }
 
   .main__a {
-    width: 50%; } }
+    width: 70%; } }
+@media (max-width: 770px) {
+  .info__number {
+    font-size: 25px;
+    line-height: 25px; }
+
+  .main__text {
+    width: 80%; } }
 .container--scheme {
   display: flex;
   justify-content: space-between;
@@ -844,9 +858,6 @@ button {
 
   .designations__title {
     font-size: 10px; } }
-@media (max-width: 1230px) {
-  .info__item {
-    font-size: 10px; } }
 @media (max-width: 990px) {
   .modal__book {
     font-size: 19px;
@@ -877,13 +888,7 @@ button {
     left: -33px; }
 
   .modal__arrow--right {
-    right: -33px; }
-
-  .info {
-    width: 50%; }
-    .info__item {
-      width: 49%;
-      font-size: 9px; } }
+    right: -33px; } }
 .menu__burger {
   position: absolute;
   top: 50%;
@@ -934,7 +939,7 @@ button {
   margin-top: 10vh;
   background: #fcfcfc;
   box-shadow: 0 7px 5px rgba(0, 0, 0, 0.4);
-  transform: translateY(-200%);
+  transform: translateX(-200%);
   transition: transform 0.5s; }
   .menu.active {
     transform: translateY(0);
@@ -978,17 +983,18 @@ button {
   overflow: hidden; }
 
 .phrase {
-  margin: 50px 0;
   width: 100%;
-  overflow: hidden; }
+  overflow: hidden;
+  height: 90vh;
+  display: flex;
+  align-items: center; }
 
 .phrase__text {
   padding: 0 20px;
   color: #000;
   font-family: "Raleway", sans-serif;
-  font-size: 20px;
+  font-size: 5vw;
   font-weight: 700;
-  letter-spacing: .1rem;
   text-align: center;
   width: 100%; }
 

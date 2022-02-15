@@ -3,73 +3,134 @@
     margin: 0 auto;
     color: black;
     background-color: white;
-    // padding: 10px;
+    
+    &__container {
+        position: relative;
+    }
+
+    &__label {
+        position: relative;
+        padding: 5px 10px;
+        font-size: 18px;
+        color: black;
+        font-weight: 700;
+        // letter-spacing: .1rem;
+        background: #fff;
+    
+        transition: .2s;
+    
+        cursor: pointer;
+    }
+
+    &__label:hover {
+        background: rgba(75, 84, 132, .2);
+    }
+
+    &__active &__label {
+        background: rgba(75, 84, 132, .2);
+    }
+
+    &__label::before {
+        content: '+';
+        color: black;
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        font-size: 25px;
+        transform: translateY(-50%);
+    }
+
+    &__content {
+        position: relative;
+        background: white;
+        height: 0;
+        font-size: 16px;
+        text-align: justify;
+        overflow: hidden;
+        transition: height 0.5s linear;
+    }
+
+    &__container {
+        &.accordion__active .accordion__content {
+            height: auto;
+        }
+
+        &.accordion__active .accordion__label::before {
+            content: '-';
+        }
+    }
+
+    & hr {
+        margin: 0;
+        border: 1px solid grey;
+    }
+
 }
 
-.accordion .accordion__container {
-    position: relative;
-}
+// .accordion .accordion__container {
+//     position: relative;
+// }
 
-.accordion .accordion__label {
-    position: relative;
-    padding: 10px 20px;
-    font-size: 20px;
-    color: black;
-    font-weight: 700;
-    letter-spacing: .1rem;
-    background: #fff;
+// .accordion .accordion__label {
+//     position: relative;
+//     padding: 5px 10px;
+//     font-size: 18px;
+//     color: black;
+//     font-weight: 700;
+//     // letter-spacing: .1rem;
+//     background: #fff;
 
-    transition: .2s;
+//     transition: .2s;
 
-    cursor: pointer;
-}
+//     cursor: pointer;
+// }
 
-.accordion__label:hover {
-    background: rgba(75, 84, 132, .2);
-}
+// .accordion__label:hover {
+//     background: rgba(75, 84, 132, .2);
+// }
 
-.accordion__active .accordion__label {
-    background: rgba(75, 84, 132, .2);
-}
+// .accordion__active .accordion__label {
+//     background: rgba(75, 84, 132, .2);
+// }
 
-.accordion .accordion__label::before {
-    content: '+';
-    color: black;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    font-size: 30px;
-    transform: translateY(-50%);
-}
+// .accordion .accordion__label::before {
+//     content: '+';
+//     color: black;
+//     position: absolute;
+//     top: 50%;
+//     right: 10px;
+//     font-size: 25px;
+//     transform: translateY(-50%);
+// }
 
-.accordion .accordion__content {
-    position: relative;
-    background: white;
-    height: 0;
-    font-size: 16px;
-    text-align: justify;
-    overflow: hidden;
-    transition: height 0.5s linear;
-}
+// .accordion .accordion__content {
+//     position: relative;
+//     background: white;
+//     height: 0;
+//     font-size: 16px;
+//     text-align: justify;
+//     overflow: hidden;
+//     transition: height 0.5s linear;
+// }
 
-.accordion .accordion__content .modal__content {
-    font-size: 16px;
-}
+// // .accordion .accordion__content .modal__content {
+// //     font-size: 16px;
+// // }
 
-.accordion hr {
-    margin: 0;
-    border: 1px solid grey;
-}
-
-
+// .accordion hr {
+//     margin: 0;
+//     border: 1px solid grey;
+// }
 
 
-.accordion .accordion__container.accordion__active .accordion__content {
-    height: auto;
-    // height: 150px;
-}
 
-.accordion .accordion__container.accordion__active .accordion__label::before {
-    content: '-';
-    font-size: 30px;
-}
+
+// .accordion .accordion__container.accordion__active .accordion__content {
+//     height: auto;
+//     // height: 150px;
+// }
+
+// .accordion .accordion__container.accordion__active .accordion__label::before {
+//     content: '-';
+//     font-size: 30px;
+// }

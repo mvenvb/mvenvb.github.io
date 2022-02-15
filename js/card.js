@@ -1,3 +1,5 @@
+console.log("I'm from card.js!!!");
+
 const colors = ['75, 84, 132',
     '70, 204, 166',
     '174, 208, 136',
@@ -589,112 +591,12 @@ const lineStations = {
     ]
 };
 
-allBookCards();
 
 
-// Modal
-const modalCall = $("[data-modal]");
-const modalClose = $("[data-close]");
+cardBuilt(lineStations['line1'], 1);
 
-
-modalCall.on("click", function (event) {
-    event.preventDefault();
-
-    let $this = $(this);
-    let modalId = $this.data("modal");
-
-    $(modalId).addClass("show");
-    $("body").addClass("no-scroll");
-
-    let lineNumber = modalId.split('')[modalId.length - 1];
-    let sliderLine = '#sliderLine' + lineNumber;
-
-    for (i = 1; i < 9; i++) {
-        $(sliderLine).slick('setPosition');
-    }
-    let color = 'rgb(' + colors[lineNumber - 1] + ')';
-    changeDots(color);
-});
-
-modalClose.on("click", function (event) {
-    event.preventDefault();
-
-    let $this = $(this);
-    let modalParent = $this.parents(".modal");
-
-    modalParent.removeClass("show");
-    $("body").removeClass("no-scroll");
-    $(this).slick('slickGoTo', 0);
-});
-
-$(".modal").on("click", function () {
-    $(this).removeClass("show");
-    $("body").removeClass("no-scroll");
-});
-
-$(".modal__close").on("click", function () {
-    $(".modal").removeClass("show");
-    $("body").removeClass("no-scroll");
-});
-
-
-
-$(".modal__dialog").on("click", function (event) {
-    event.stopPropagation();
-});
-// Slider: https://kenwheeler.github.io/slick/
-for (i = 1; i < 9; i++) {
-    let sliderLine = '#sliderLine' + i;
-    $(sliderLine).slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: true,
-        prevArrow: '<div class = "modal__arrow modal__arrow--left slickPrev"><img class="modal__arrow-icon" src="./assets/img/cards/left-arrow.svg" alt=""></div>',
-        nextArrow: '<div class = "modal__arrow modal__arrow--right slickNext"><img class="modal__arrow-icon" src="./assets/img/cards/right-arrow.svg" alt=""></div>',
-        dots: true,
-    });
-}
-
-//----------------------------------------------------------------
-// щелкаем на название книги, и вылетает нужный слайдер на нужной карточке.
-//NB: разобраться с окраской точечек!!! И с загрузкой карточки пересадочной станции...
-
-$('.stations__item').on("click", function (event) {
-    event.preventDefault();
-
-    let stationId = $(this).prop('id').split('-');
-    let line = stationId[0];
-    let bookNum = stationId[1];
-
-    $('#sliderLine' + line).slick("refresh");
-    document.getElementById('line' + line).classList.add('show');
-    $('#sliderLine' + line).slick('slickGoTo', bookNum, true); 
-    changeDots('rgb(' + colors[line-1] + ')');
-});
-
-//------------------------------------------------------------
-
-
-
-
-function changeDots(color) {
-    let dots = document.querySelectorAll('.slick-dots button');
-    let dotsActive = document.querySelectorAll('.slick-active button');
-    dots.forEach(dot => dot.style.background = color);
-    dotsActive.forEach(dot => {
-        dot.style.background = color;
-    });
-}
-
-function allBookCards() {
-    for (i = 1; i < 9; i++) {
-        let line = 'line' + i;
-        bookCards(lineStations[line], i);
-    }
-}
-
-function bookCards(line, lineNumber) {
+function cardBuilt(line, lineNumber) {
+    let lineCards = [];
     let str = '';
 
     let color = 'rgb(' + colors[lineNumber - 1] + ')';
@@ -706,109 +608,70 @@ function bookCards(line, lineNumber) {
         let str_temp = '';
         let facts = '';
         b.facts.forEach((fact, i) => {
-            facts += '<p>' + fact + '</p>';
+            facts += '<div class="card__information">' + fact + '</div>';
         });
 
         let movies = '';
         if (b.movies.length == 0) {
             movies = '';
         } else if (b.movie_links.length == 0) {
-            movies += '<div class="modal__h2">Адаптации:</div>' + '<p>' + b.movies[0] + '</p>';
+            movies += '<div class="card__title">Адаптации:</div>' + '<p>' + b.movies[0] + '</p>';
         } else {
-            movies += '<div class="modal__h2">Экранизации:</div>'
+            movies += '<div class="card__title">Экранизации:</div><div class="card__text">'
 
             for (let i = 0; i < b.movies.length; i++) {
-                movies += '<div class="modal__films">' +
-                    '<span class="modal__icon"><img src="./assets/img/cards/clapperboard.png" alt="clapperboard-icon"></span>' +
-                    '<a class="modal__film" href="' +
+                movies += '<div class="card__films">' +
+                    '<span class="card__icon"><img src="./assets/img/cards/clapperboard.png" alt="clapperboard-icon"></span>' +
+                    '<a class="card__film" href="' +
                     b.movie_links[i] +
                     '"target="blank">' +
                     b.movies[i] +
                     '</a>' +
                     '</div>';
             }
+            movies += '</div>';
         }
 
-        let cites = '';
+        let cites = '<div class="card__title">Цитаты из книги:</div>';
         b.cites.forEach((cite, i) => {
-            if (i == 0) {
-                cites += '<div class="modal__par">' +
-                    '<div class="modal__h2">Цитаты из книги:</div>' +
-                    cite +
-                    '</div>';
-            } else {
-                cites += '<div class="modal__par">' + cite + '</div>';
-            }
+            cites += '<div class="card__text">' + '<div class="card__information">' + cite + '</div>' + '</div>';
         });
 
-        let textNum = '';
-        if (lineNumber == 6 || lineNumber == 8) {
-            textNum +=
-                '<text class="text_num text_num--modal" x="5" y="15">' + lineNumber + '</text>';
-        } else {
-            textNum +=
-                '<text class="text_num text_num--modal" x="6" y="14">' + lineNumber + '</text>';
-        }
-
-        let gradBgc = '';
-        let colorsFooterIcons = [color, color];
-        if (b.transfer != 'no') {
-            gradBgc = b.transfer;
-            colorsFooterIcons = gradBgc.match(/rgba\(\d+,\d+,\d+,\d+\)/g).slice(1, 3);
-        } else {
-            gradBgc += 'background: ' + color;
-        }
-
         str_temp +=
-            '<div class="modal__card">' +
-            '<div>' +
-            '<div class="modal__title" style="' + gradBgc + '">' +
-            '<div class="modal__close"><img src="./assets/img/cards/close.svg"></div>' +
-            '<div class="modal__text">' +
-            '<span class="modal__book">' +
-            b.book +
-            '</span>' +
-            '<span class="modal__author">' + b.author + '</span>' +
+            '<div class="accordion__container">' +
+            '<div class="accordion__label">' + 
+            '<div class="card__book">' +
+            b.book + '</div>' +
+            '<div class="card__author">' +
+            b.author + '</div>' +
             '</div>' +
-            '</div>' +
-            '<div class="modal__content">' +
-            '<div class="modal__left" style="background: ' + colorL + '">' +
-            '<div class="modal__par">' +
-            '<div class="modal__h2">О книге:</div>' +
+            '<div class="accordion__content">' + 
+            '<div class="card">' +
+            '<div class="card__left" style="background: ' + colorL + '">' +
+            '<div class="card__title">О книге:</div>' +
+            '<div class="card__text">' +
             b.about +
             '</div>' +
-            '<div class="modal__par">' +
-            '<div class="modal__h2">Факты:</div>' +
+            '<div class="card__title">Факты:</div>' +
+            '<div class="card__facts card__text">' +
             facts +
             '</div>' +
-            '<div class="modal__par">' +
             movies +
             '</div>' +
-            '</div>' +
-            '<div class="modal__right" style="background: ' + colorR + '">' +
+            '<div class="card__right" style="background: ' + colorR + '">' +
             cites +
             '</div>' +
             '</div>' +
-            '<div class="modal__footer" style="background: ' + colorR + '">' +
-            '<div class="modal__line" style="' + gradBgc + '">' +
-            '<svg class="modal__line-left" width=20 height=20>' +
-            '<rect x="0" y="0" width="20" height="20" fill="' + colorsFooterIcons[0] + '" rx="4"></rect>' + textNum +
-            '</svg>' +
-            '<svg class="modal__line-right" width=20 height=20>' +
-            '<rect x="0" y="0" width="20" height="20" fill="' + colorsFooterIcons[1] + '" rx="4"></rect>' +
-            textNum +
-            '</svg>' +
             '</div>' +
-            '</div>' +
-            '</div>' +
-            '</div>';
+            '</div>' + '<hr>';
 
+        // lineCards.push(str_temp);
         str += str_temp;
         str_temp = '';
 
     });
 
-    let sliderLine = 'sliderLine' + lineNumber;
-    let modalLine = document.getElementById(sliderLine);
-    modalLine.insertAdjacentHTML('afterbegin', str);
+    let accordion = document.getElementById('accordion');
+    accordion.insertAdjacentHTML('afterbegin', str);
+
 }

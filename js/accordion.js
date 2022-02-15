@@ -52,11 +52,11 @@ const accordion = document.getElementsByClassName('accordion__container');
 console.log(accordion[1]);
 
 
-for (i=0; i<accordion.length; i++) {
+for (let i = 0; i < accordion.length; i++) {
   accordion[i].addEventListener('click', function () {
-    accordion.forEach(el => {
-      el.classList.remove('accordion__active');
-    });
+    // accordion.forEach(el => {
+    //   el.classList.remove('accordion__active');
+    // });
     this.classList.toggle('accordion__active');
     
   })
