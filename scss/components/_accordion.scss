@@ -6,6 +6,8 @@
     
     &__container {
         position: relative;
+
+        border-bottom: 1px solid grey;
     }
 
     &__label {
@@ -32,7 +34,7 @@
 
     &__label::before {
         content: '+';
-        color: black;
+        color: gray;
         position: absolute;
         top: 50%;
         right: 10px;
@@ -59,78 +61,16 @@
             content: '-';
         }
     }
-
-    & hr {
-        margin: 0;
-        border: 1px solid grey;
-    }
-
 }
 
-// .accordion .accordion__container {
-//     position: relative;
-// }
+@for $i from 1 through 8 {
+	.l#{$i} .accordion__label:hover {
+		background: #{nth($light-colors, $i)};
+	}
 
-// .accordion .accordion__label {
-//     position: relative;
-//     padding: 5px 10px;
-//     font-size: 18px;
-//     color: black;
-//     font-weight: 700;
-//     // letter-spacing: .1rem;
-//     background: #fff;
-
-//     transition: .2s;
-
-//     cursor: pointer;
-// }
-
-// .accordion__label:hover {
-//     background: rgba(75, 84, 132, .2);
-// }
-
-// .accordion__active .accordion__label {
-//     background: rgba(75, 84, 132, .2);
-// }
-
-// .accordion .accordion__label::before {
-//     content: '+';
-//     color: black;
-//     position: absolute;
-//     top: 50%;
-//     right: 10px;
-//     font-size: 25px;
-//     transform: translateY(-50%);
-// }
-
-// .accordion .accordion__content {
-//     position: relative;
-//     background: white;
-//     height: 0;
-//     font-size: 16px;
-//     text-align: justify;
-//     overflow: hidden;
-//     transition: height 0.5s linear;
-// }
-
-// // .accordion .accordion__content .modal__content {
-// //     font-size: 16px;
-// // }
-
-// .accordion hr {
-//     margin: 0;
-//     border: 1px solid grey;
-// }
+	.l#{$i} .accordion__active .accordion__label {
+		background: #{nth($light-colors, $i)};
+	}
 
 
-
-
-// .accordion .accordion__container.accordion__active .accordion__content {
-//     height: auto;
-//     // height: 150px;
-// }
-
-// .accordion .accordion__container.accordion__active .accordion__label::before {
-//     content: '-';
-//     font-size: 30px;
-// }
+}

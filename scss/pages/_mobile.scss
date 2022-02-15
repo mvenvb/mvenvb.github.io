@@ -135,13 +135,16 @@
 }
 
 .line {
-	&--heroic {
-		background-color: $color-line1;
+
+	display: none;
+
+	&.visible {
+		display: block;
 	}
 
 	&__title {
 		padding: 0 20px;
-		height: 7vh;
+		height: 10vh;
 
 		display: flex;
 		align-items: center;
@@ -149,9 +152,17 @@
 		background-color: $color-line1;
 
 		color: #fff;
-		font-size: 16px;
+		font-size: 14px;
 		letter-spacing: .1rem;
 		text-transform: uppercase;
 		font-weight: 700;
+	}
+
+	
+}
+
+@for $i from 1 through 8 {
+	.l#{$i} .line__title {
+		background-color: #{nth($colors, $i)};
 	}
 }

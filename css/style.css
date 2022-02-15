@@ -377,14 +377,15 @@ button {
     font-size: 20px; } }
 @media (max-width: 540px) {
   .header__title {
-    font-size: 16px; } }
+    font-size: 14px; } }
 .accordion {
   width: 100%;
   margin: 0 auto;
   color: black;
   background-color: white; }
   .accordion__container {
-    position: relative; }
+    position: relative;
+    border-bottom: 1px solid grey; }
   .accordion__label {
     position: relative;
     padding: 5px 10px;
@@ -400,7 +401,7 @@ button {
     background: rgba(75, 84, 132, 0.2); }
   .accordion__label::before {
     content: '+';
-    color: black;
+    color: gray;
     position: absolute;
     top: 50%;
     right: 10px;
@@ -418,9 +419,54 @@ button {
     height: auto; }
   .accordion__container.accordion__active .accordion__label::before {
     content: '-'; }
-  .accordion hr {
-    margin: 0;
-    border: 1px solid grey; }
+
+.l1 .accordion__label:hover {
+  background: rgba(75, 84, 132, 0.2); }
+
+.l1 .accordion__active .accordion__label {
+  background: rgba(75, 84, 132, 0.2); }
+
+.l2 .accordion__label:hover {
+  background: rgba(71, 205, 167, 0.2); }
+
+.l2 .accordion__active .accordion__label {
+  background: rgba(71, 205, 167, 0.2); }
+
+.l3 .accordion__label:hover {
+  background: rgba(174, 208, 136, 0.4); }
+
+.l3 .accordion__active .accordion__label {
+  background: rgba(174, 208, 136, 0.4); }
+
+.l4 .accordion__label:hover {
+  background: rgba(249, 189, 83, 0.2); }
+
+.l4 .accordion__active .accordion__label {
+  background: rgba(249, 189, 83, 0.2); }
+
+.l5 .accordion__label:hover {
+  background: rgba(158, 65, 83, 0.2); }
+
+.l5 .accordion__active .accordion__label {
+  background: rgba(158, 65, 83, 0.2); }
+
+.l6 .accordion__label:hover {
+  background: rgba(255, 157, 141, 0.2); }
+
+.l6 .accordion__active .accordion__label {
+  background: rgba(255, 157, 141, 0.2); }
+
+.l7 .accordion__label:hover {
+  background: rgba(43, 110, 112, 0.2); }
+
+.l7 .accordion__active .accordion__label {
+  background: rgba(43, 110, 112, 0.2); }
+
+.l8 .accordion__label:hover {
+  background: rgba(210, 84, 136, 0.2); }
+
+.l8 .accordion__active .accordion__label {
+  background: rgba(210, 84, 136, 0.2); }
 
 .card {
   display: flex;
@@ -439,7 +485,7 @@ button {
   .card__text {
     margin: 5px 0; }
   .card__left, .card__right {
-    padding: 10px; }
+    padding: 10px 15px 10px 10px; }
   .card__left {
     width: 55%;
     display: flex;
@@ -998,18 +1044,44 @@ button {
   text-align: center;
   width: 100%; }
 
-.line--heroic {
+.line {
+  display: none; }
+  .line.visible {
+    display: block; }
+  .line__title {
+    padding: 0 20px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    background-color: #4b5484;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    font-weight: 700; }
+
+.l1 .line__title {
   background-color: #4b5484; }
-.line__title {
-  padding: 0 20px;
-  height: 7vh;
-  display: flex;
-  align-items: center;
-  background-color: #4b5484;
-  color: #fff;
-  font-size: 16px;
-  letter-spacing: .1rem;
-  text-transform: uppercase;
-  font-weight: 700; }
+
+.l2 .line__title {
+  background-color: #46cca6; }
+
+.l3 .line__title {
+  background-color: #aed088; }
+
+.l4 .line__title {
+  background-color: #f9bd53; }
+
+.l5 .line__title {
+  background-color: #9e4153; }
+
+.l6 .line__title {
+  background-color: #ff9d8d; }
+
+.l7 .line__title {
+  background-color: #2b6e70; }
+
+.l8 .line__title {
+  background-color: #d25488; }
 
 /*# sourceMappingURL=style.css.map */
