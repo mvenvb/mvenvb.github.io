@@ -656,7 +656,7 @@ function cardBuilt(line, lineNumber) {
 
         str_temp += '<div class="accordion-body">' +
             '<div class="accordion">' +
-            '<div class="accordion__container">' +
+            '<div class="accordion__container" style="border-color: '+ color +'">' +
             '<div class="accordion__label">' + 
             '<div class="card__decor" style="background: '+ color +'"><div class="card__decor--circle" style="background: '+ color +'"></div></div>' +
             '<div class="card__book">' +
