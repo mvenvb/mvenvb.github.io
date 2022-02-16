@@ -12,7 +12,10 @@ Array.prototype.forEach.call(accordion, function(element) {
         element.classList.remove('accordion__active');
       });
       this.classList.add('accordion__active');
+      this.scrollIntoView({behavior: "smooth", block: "start"});
     }
+
+
   
     // this.classList.toggle('accordion__active');
   });

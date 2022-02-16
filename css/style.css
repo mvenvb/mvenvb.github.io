@@ -388,7 +388,7 @@ button {
     border-bottom: 1px solid grey; }
   .accordion__label {
     position: relative;
-    padding: 5px 10px;
+    padding: 5px 10px 5px 30px;
     font-size: 18px;
     color: black;
     font-weight: 700;
@@ -543,6 +543,45 @@ button {
     margin-bottom: 5px; }
     .card__facts .card__information:last-child {
       margin-bottom: 0; }
+
+.card__decor {
+  width: 7px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .card__decor--circle {
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); }
+    .card__decor--circle::after {
+      content: '';
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #fff;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      opacity: 0;
+      transition: opacity .1s linear; }
+  .card__decor--start, .card__decor--end {
+    height: 50%; }
+  .card__decor--start {
+    top: 50%; }
+    .card__decor--start .card__decor--circle {
+      top: 0; }
+  .card__decor--end .card__decor--circle {
+    top: 100%; }
+
+.accordion__active .card__decor--circle::after {
+  opacity: 1; }
 
 @media (max-width: 770px) {
   .card__left, .card__right {
@@ -992,7 +1031,7 @@ button {
     z-index: 1000; }
   .menu__item {
     list-style-type: none;
-    height: 5vh;
+    height: 8vh;
     display: flex;
     align-items: center;
     font-weight: 700;

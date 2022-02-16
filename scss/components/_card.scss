@@ -134,6 +134,76 @@
 
 }
 
+.card__decor {
+    width: 7px;
+    height: 100%;
+    // background: $color-line1;
+
+    position: absolute;
+    top: 0;
+    left: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--circle {
+        width: 17px;
+        height: 17px;
+        border-radius: 50%;
+        // background: $color-line1;
+    
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &::after {
+            content: '';
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #fff;
+
+            position: absolute;
+            top: 4px;
+            left: 4px;
+
+            opacity: 0;
+            transition: opacity .1s linear;
+        }
+    }
+    
+    &--start, &--end {
+        height: 50%;
+
+    }
+
+    &--start {
+        top: 50%;
+
+        & .card__decor--circle {
+            top: 0;
+        }
+    }
+
+    &--end {
+        & .card__decor--circle {
+            top: 100%;
+        }
+    }
+
+}
+
+.accordion__active .card__decor--circle::after {
+    opacity: 1;
+}
+
+
+
+// .card__line:last-child .card__station {
+//     top: 100%;
+// }
+
 @media (max-width: 770px) {
     .card {
         &__left, &__right {
