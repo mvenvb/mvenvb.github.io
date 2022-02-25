@@ -1,26 +1,33 @@
 // Header
 .header {
-    height: 10vh;
-    // height: 15%;
+    // height: 8vh;
+    height: 70px;
 
 
     box-shadow: 0 7px 5px rgba(#000, 0.4);
     padding: 10px 20px;
     // margin-bottom: 20px;
-    background: $header-color;
+    background: $light-color;
 
+    // position: fixed;
+    // top: 0;
+    // left: 0;
     position: relative;
+    width: 100%;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
+    text-align: center;
+
     &__logo {
         width: 4%;
         height: auto;
-        margin-right: 3%;
+        // margin-right: 3%;
 
-        position: absolute;
-        left: 15%;
+        // position: absolute;
+        // left: 15%;
     }
 
     &__img {
@@ -30,13 +37,13 @@
 
     &__title {
         font-family: $font;
-        font-size: 25px;
+        font-size: 22px;
         letter-spacing: .1rem;
         text-transform: uppercase;
         font-weight: 700;
-        text-align: center;
+        // text-align: center;
 
-        width: 90%;
+        width: 40%;
     }
 
     &__title span {
@@ -44,7 +51,25 @@
     }
 }
 
+
+
+@media (max-width: 990px) {
+
+    .header {
+        justify-content: start;
+        text-align: left;
+    }
+
+    .header__title {
+        width: 70%;
+    }
+    
+}
 @media (max-width: 770px) {
+
+    // .header {
+    //     justify-content: start;
+    // }
 
     .header__title {
         font-size: 20px;
